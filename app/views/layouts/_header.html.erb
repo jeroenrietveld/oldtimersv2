@@ -14,14 +14,20 @@
 					<i class="icon-search icon-large"></i>
 				</form>
 
-				<div class="span1">
-					<div class="profile-border">
-						<img src="" height="25" width="25" />
+				<% if user_signed_in? %>
+					<div class="span1">
+						<div class="profile-border">
+							<img src="" height="25" width="25" />
+						</div>
 					</div>
-				</div>
-				<div class="span1">
-					Edit
-				</div>
+					<div class="span1">
+						Edit
+					</div>
+				<% else %>
+					<div class="span2 login">
+						Log in
+					</div>
+				<% end %>
 			</nav>
 		</div>
 	</div>
