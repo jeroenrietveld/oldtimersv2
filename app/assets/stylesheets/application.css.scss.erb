@@ -9,5 +9,38 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
+
+@font-face {
+  font-family: 'InterFace';
+  src: url('<%= asset_path('InterFaceLt.ttf') %>');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import "bootstrap";
+@import "variables.css.scss";
+@import "mixins.css.scss";
+
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	margin: 0 0 50px;
+}
+
+body, html {
+	width: 100%;
+	background: $grey;
+	font-family: InterFace;
+	color: $font-color;
+}
+
+#clearfix {
+	clear: both;
+}
+
+@import "header.css.scss";
+@import "footer.css.scss";

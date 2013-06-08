@@ -1,0 +1,36 @@
+footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	background: $red;
+
+	.row {
+		height: 30px;
+		padding: 10px 0;
+
+		ul {
+			text-align: center;
+			list-style-type: none;
+			margin-bottom: 0;
+			padding: 5px 0;
+
+			li {
+				padding: 0px 15px;
+				float: left;
+
+				a {
+					text-transform: uppercase;
+					color: $white;
+					text-align: center;
+				}
+			}
+		}
+
+		.contact {
+			margin-left: 40px;
+			float: right;
+		}
+	}
+}
