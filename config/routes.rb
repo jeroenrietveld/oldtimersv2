@@ -1,4 +1,5 @@
 Oldtimersv2::Application.routes.draw do
+  devise_for :users
   get "general_pages/home"
 
   root :to => "general_pages#home"

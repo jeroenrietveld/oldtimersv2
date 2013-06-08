@@ -2,7 +2,9 @@
 	width: 100%;
 	height: auto;
 	background: $white;
-	box-shadow: 0px 0px 4px 3px #AAA;
+	box-shadow: 0px 0px 5px 0px #777;
+	position: relative;
+	z-index: 1;
 
 	.row {
 		padding: 10px 0;

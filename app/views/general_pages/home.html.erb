@@ -1,0 +1,14 @@
+<div class="landing">
+	<div class="container">
+		<div class="row">
+			<% if user_signed_in? %>
+				Logged in
+			<% else %>
+				Not logged in
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
