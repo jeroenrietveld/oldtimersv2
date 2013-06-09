@@ -1,5 +1,5 @@
 <div class="span1">
-	<%= render :partial => "shared/profile_image", :locals => { :border => "red-border" } %>
+	<%= render :partial => "shared/profile_image", :locals => { :border => "red-border", :username => question.user.email } %>
 </div>
 <div class="span10 question-info">
 	<div class="pull-left">

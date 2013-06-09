@@ -38,7 +38,7 @@ class QuestionsController < ApplicationController
       end
     end
 
-    #return render :text => @question.id
+    @question.user = current_user
 
     if @question.save
       redirect_to @question, notice: 'Question was successfully created.'

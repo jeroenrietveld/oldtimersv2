@@ -3,7 +3,7 @@
 		<h3>Stel hieronder meteen je vraag</h3>
 	</header>
 	<div class="span1 offset1">
-		<%= render :partial => "shared/profile_image", :locals => { :border => "white-border" } %>
+		<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :username => current_user.email } %>
 	</div>
 	<div class="span9 question-form-container">
 		<%= render :partial => 'forms/question_form' %>
