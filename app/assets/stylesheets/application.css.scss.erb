@@ -8,8 +8,8 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require select2
+ *= require_self
  */
 
 @font-face {
@@ -51,6 +51,15 @@ body, html {
 
 .red-border {
 	@include profile-border($red);
+}
+
+::-webkit-input-placeholder { color: $font-color; font-family: InterFace; font-size: 15px; }
+::-moz-placeholder { color: $font-color; font-family: InterFace; font-size: 15px; } /* firefox 19+ */
+:-ms-input-placeholder { color: $font-color; font-family: InterFace; font-size: 15px; } /* ie */
+input:-moz-placeholder { color: $font-color; font-family: InterFace; font-size: 15px; }
+
+button, input[type=submit] {
+	font-family: InterFace;
 }
 
 @import "header.css.scss";

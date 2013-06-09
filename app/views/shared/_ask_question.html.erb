@@ -25,7 +25,7 @@
 			<div class="row added-labels"></div>
 
 			<div class="row select-categories">
-				<%= collection_select(:question, :categories, Category.all, :id, :name, {}, 
+				<%= collection_select(:question, :categories, Category.all, :id, :title, {}, 
 					{ :multiple => true , :id => "categories_select", :class => "span9"} )
 				%>
 			</div>
