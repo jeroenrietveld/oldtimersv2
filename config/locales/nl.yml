@@ -50,3 +50,7 @@ nl:
               blank: 'Geef minstens 1 label op'
             answers:
               invalid: 'Voer een antwoord in'
+    user:
+      attributes:
+        password:
+          blank: 'Wachtwoord'
