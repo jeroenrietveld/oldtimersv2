@@ -1,6 +1,6 @@
 class CreateCategoriesQuestions < ActiveRecord::Migration
   def change
-    create_table :categories_questions do |t|
+    create_table :categories_questions, :id => false do |t|
     	t.integer :category_id
     	t.integer :question_id
     end
