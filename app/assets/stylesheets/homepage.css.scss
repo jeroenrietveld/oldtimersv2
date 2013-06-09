@@ -147,6 +147,12 @@
 	}
 }
 
+.errors {
+	.error-messages {
+		list-style-type: none;
+	}
+}
+
 /* SELECT2 */
 .select2-choices input {
 	font-family: InterFace !important;

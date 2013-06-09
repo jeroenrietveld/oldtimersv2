@@ -1,0 +1,11 @@
+<% if @question.errors.any? %>
+  <div class="row errors">
+  	<div class="span9">
+  		<ul class="error-messages">
+			  <% @question.errors.full_messages.each do |msg| %>
+			    <li><%= msg %></li>
+			  <% end %>
+			</uL>
+		</div>
+	</div>
+<% end %>
