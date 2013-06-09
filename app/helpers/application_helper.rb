@@ -9,4 +9,8 @@ module ApplicationHelper
 
 		link_to_function(name, "test(this, \"#{association}\", \"#{escape_javascript(fields)}\")")
 	end
+
+	def fetch_latest_questions
+		@questions = Question.find(:all, :order => "created_at DESC", :limit => 5)
+	end
 end
