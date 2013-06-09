@@ -77,6 +77,14 @@
 		.question-textarea {
 			resize: none;
 		}
+		.labels{
+			position: relative;
+		}
+		.add-label {
+			position: absolute;
+			top: 5px;
+			right: 25px;
+		}
 	}
 
 	.pushpin {
