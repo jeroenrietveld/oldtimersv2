@@ -15,7 +15,11 @@
 				<%= f.text_area :description, { :placeholder => "Beschrijf je vraag en wees specifiek", :class => "span9 question-textarea", :rows => "10" } %>
 			</div>
 			
-			
+			<div class="row">
+				<% f.fields_for :labels do |builder| %>
+					
+				<% end %>
+			</div>
 
 			<%= f.submit "Stel vraag" %>
 		<% end %>
