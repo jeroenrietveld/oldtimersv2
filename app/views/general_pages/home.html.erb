@@ -8,7 +8,7 @@
 	</div>
 </div>
 
-<div class="questions">
+<div class="filter-bar">
 	<div class="container">
 		<div class="row">
 			<div class="span2 answered">
@@ -22,8 +22,17 @@
 				</select>
 			</div>
 		</div>
-		<div class="row latest-questions">
-			<%# <%= fetch_latest_questions %>
+	</div>
+</div>
+
+<div class="latest-questions">
+	<div class="container">
+		<div class="latest-questions">
+			<% fetch_latest_questions.each do |q| %>
+				<div class="row">
+					<%= render :partial => 'shared/question_template', :locals => { :question => q } %>
+				</div>
+			<% end %>
 		</div>
 	</div>
 </div>

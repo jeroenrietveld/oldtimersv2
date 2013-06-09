@@ -1,0 +1,30 @@
+<div class="span1">
+	<%= render :partial => "shared/profile_image", :locals => { :border => "red-border" } %>
+</div>
+<div class="span10 question-info">
+	<div class="pull-left">
+		<p class="title"><%= link_to question.title, question %></p>
+		<p class="category">
+			<strong>Categorie:</strong>
+      <% question.categories.each_with_index do |c, i| %>
+        <%= c.title %><% if i+1 != question.categories.length %>, <% end %>
+      <% end %>
+    </p>
+	</div>
+
+	<div class="pull-right">
+		<p class="creation-date">
+      <i><%= distance_of_time_in_words question.created_at, Time.now %> geleden</i>
+    </p>
+    
+    <div class="comment">
+      <%= image_tag("comment.png", :alt => "Comment", :width => 20, :height => 20 ) %>
+      <span class="amt">2</span>
+    </div>
+    
+    <div class="favorite">
+      <%= image_tag("favorite.png", :alt => "Favorite", :width => 20, :height => 20 ) %>
+      <span class="amt">5 Volgers</span>
+    </div>
+	</div>
+</div>
