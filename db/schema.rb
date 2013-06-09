@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130609121829) do
+ActiveRecord::Schema.define(version: 20130609153713) do
+
+  create_table "categories", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories_questions", force: true do |t|
+    t.integer "category_id"
+    t.integer "question_id"
+  end
+
+  add_index "categories_questions", ["category_id"], name: "index_categories_questions_on_category_id"
+  add_index "categories_questions", ["question_id"], name: "index_categories_questions_on_question_id"
 
   create_table "labels", force: true do |t|
     t.string   "title"
