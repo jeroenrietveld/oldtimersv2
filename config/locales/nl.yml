@@ -46,6 +46,8 @@ nl:
               blank: 'Vul een beschrijving in'
             categories:
               blank: 'Geef minstens 1 categorie aan'
+            labels:
+              blank: 'Geef minstens 1 label op'
             answers:
               invalid: 'Voer een antwoord in'
     user:

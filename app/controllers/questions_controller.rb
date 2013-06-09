@@ -22,11 +22,28 @@ class QuestionsController < ApplicationController
   # POST /questions
   def create
     @question = Question.new(question_params)
-    @question.labels.build
+
+    params[:question][:categories].each do |p|
+      unless p.empty?
+        c = Category.find(p)
+        @question.categories << c if c
+      end
+    end
+
+    params[:question][:labels_attributes].each do |p|
+      title = p[1][:title]
+      unless title.empty?
+        l = Label.create(:title => title)
+        @question.labels << l if l
+      end
+    end
+
+    #return render :text => @question.id
 
     if @question.save
       redirect_to @question, notice: 'Question was successfully created.'
     else
+      @question.labels.build
       render template: 'general_pages/home'
     end
   end

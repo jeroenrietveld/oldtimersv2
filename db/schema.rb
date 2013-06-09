@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20130609153713) do
     t.datetime "updated_at"
   end
 
-  create_table "categories_questions", force: true do |t|
+  create_table "categories_questions", id: false, force: true do |t|
     t.integer "category_id"
     t.integer "question_id"
   end
@@ -28,10 +28,13 @@ ActiveRecord::Schema.define(version: 20130609153713) do
   add_index "categories_questions", ["question_id"], name: "index_categories_questions_on_question_id"
 
   create_table "labels", force: true do |t|
+    t.integer  "question_id"
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "labels", ["question_id", "created_at"], name: "index_labels_on_question_id_and_created_at"
 
   create_table "questions", force: true do |t|
     t.string   "title"
