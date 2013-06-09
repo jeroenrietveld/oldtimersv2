@@ -17,7 +17,7 @@
 			
 			<%= f.fields_for :labels do |builder| %>
 				<div class="row labels">
-					<%= builder.text_field :title, { :placeholder => "Label", :class => "span9 label-input" } %>
+					<%= builder.text_field :title, { :placeholder => "Belangrijke aandachtspunten of essentiële informatie", :class => "span9 label-input" } %>
 					<%= create_hidden_label_field image_tag("add_label.png", :alt => "box", :width => 20, :height => 20, :class => "add-label"), f, :labels %>
 				</div>
 			<% end %>

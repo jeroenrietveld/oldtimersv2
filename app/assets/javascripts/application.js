@@ -15,6 +15,15 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).ready(function() {
+	$(".label-input").keypress(function(e) {
+		if(e.which == 13) {
+			e.preventDefault();
+			$(".add-label").click();
+		}
+	});
+});
+
 function test(link, association, content) {
 	var value = $(".label-input").val();
 
@@ -28,6 +37,6 @@ function test(link, association, content) {
 
 	  $(link).parent(".labels").append(content);
 
-	  $(".added-labels").append('<div class="span6 pushpin"><img src="/assets/pushpin.png" height="12" width="12" />asd</div><div class="span3 remove-label"><img class="pull-right" src="/assets/remove.png" height="20" width="20" /></div>');
+	  $(".added-labels").append('<div class="row added-label"><div class="span6 pushpin"><img src="/assets/pushpin.png" height="12" width="12" />'+value+'</div><div class="span3 remove-label"><img class="pull-right" src="/assets/remove.png" height="20" width="20" /></div></div>');
 	}
 }
