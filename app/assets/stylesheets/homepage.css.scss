@@ -62,8 +62,12 @@
 		}
 	}
 
-	.profile-image-container {
-		text-align: center;
+	figure {
+		margin:0;
+		
+		figcaption {
+			text-align: center;
+		}
 	}
 }
 
