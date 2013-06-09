@@ -28,6 +28,6 @@ function test(link, association, content) {
 
 	  $(link).parent(".labels").append(content);
 
-	  //$(".added-labels").append('<div class="span1"><img src="/assets/add_label.png" /></div>');
+	  $(".added-labels").append('<div class="span6 pushpin"><img src="/assets/pushpin.png" height="12" width="12" />asd</div><div class="span3 remove-label"><img class="pull-right" src="/assets/remove.png" height="20" width="20" /></div>');
 	}
 }
