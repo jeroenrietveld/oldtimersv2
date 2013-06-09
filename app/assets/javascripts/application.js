@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require select2
 //= require_tree .
 
 $(document).ready(function() {
@@ -22,6 +23,11 @@ $(document).ready(function() {
 			$(".add-label").click();
 		}
 	});
+
+	$("#categories_select").select2({
+  	width: 'resolve',
+  	placeholder: 'Selecteer passende categorieën'
+  });
 });
 
 function test(link, association, content) {

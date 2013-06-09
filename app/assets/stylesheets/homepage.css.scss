@@ -112,6 +112,19 @@
 			color: $white;
 			@include gradient;
 		}
+		.select-categories {
+			padding: 10px 0;
+
+				ul {
+				border-radius: 4px 4px 0 0;
+				border-color: #D6D6D6;
+				box-shadow: none;
+
+				input{
+					box-shadow: none;
+				}
+			}
+		}
 	}
 }
 

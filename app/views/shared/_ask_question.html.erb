@@ -24,6 +24,12 @@
 			
 			<div class="row added-labels"></div>
 
+			<div class="row select-categories">
+				<%= collection_select(:question, :categories, Category.all, :id, :name, {}, 
+					{ :multiple => true , :id => "categories_select", :class => "span9"} )
+				%>
+			</div>
+
 			<div class="row">
 				<%= f.submit "Stel vraag", :class => "span2 pull-right offset1" %>
 			</div>
