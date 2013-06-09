@@ -26,6 +26,8 @@ function test(link, association, content) {
 		$(".label-input").val("");
 	  content = $(content).val(value);
 
-	  $(link).siblings(".labels").append(content);
+	  $(link).parent(".labels").append(content);
+
+	  //$(".added-labels").append('<div class="span1"><img src="/assets/add_label.png" /></div>');
 	}
 }
