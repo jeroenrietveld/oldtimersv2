@@ -1,0 +1,29 @@
+<%= form_for @question do |f| %>
+	<%= render 'shared/error_messages' %>
+	<div class="row">
+		<%= f.text_field :title, { :placeholder => "Wat is je vraag?", :class => "span9" } %>
+	</div>
+
+	<div class="row">
+		<%= f.text_area :description, { :placeholder => "Beschrijf je vraag en wees specifiek", :class => "span9 question-textarea", :rows => "10" } %>
+	</div>
+
+	<%= f.fields_for :labels do |builder| %>
+		<div class="row labels">
+			<%= builder.text_field :title, { :placeholder => "Belangrijke aandachtspunten of essentiële informatie", :class => "span9 label-input" } %>
+			<%= create_hidden_label_field image_tag("add_label.png", :alt => "box", :width => 20, :height => 20, :class => "add-label"), f, :labels %>
+		</div>
+	<% end %>
+
+	<div class="row added-labels"></div>
+
+	<div class="row select-categories">
+		<%= collection_select(:question, :categories, Category.all, :id, :title, {}, 
+			{ :multiple => true , :id => "categories_select", :class => "span9"} )
+		%>
+	</div>
+
+	<div class="row">
+		<%= f.submit "Stel vraag", :class => "span2 pull-right offset1" %>
+	</div>
+<% end %>
