@@ -53,6 +53,20 @@
 	}
 }
 
+.ask-question {
+	.question-info {
+		color: $white;
+
+		h3 {
+			font-weight: normal;
+		}
+	}
+
+	.profile-image-container {
+		text-align: center;
+	}
+}
+
 .questions {
 	padding: 10px 0 5px 0;
 	height: auto;

@@ -1,0 +1,17 @@
+<div class="row ask-question">
+	<header class="span10 offset2 question-info">
+		<h3>Stel hieronder meteen je vraag</h3>
+	</header>
+	<div class="span1 offset1">
+		<%= render :partial => "shared/profile_image", :locals => { :border => "white-border" } %>
+	</div>
+	<div class="span9">
+		<%= form_for @question do |f| %>
+			<%= f.text_field :title, { :placeholder => "Wat is je vraag?" } %>
+
+			<%= f.text_area :description, { :placeholder => "Beschrijf je vraag en wees specifiek" } %>
+
+			<%= f.submit "Stel vraag" %>
+		<% end %>
+	</div>
+</div>

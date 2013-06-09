@@ -26,10 +26,13 @@
 
 			a {
 				text-transform: uppercase;
-				color: $font-color;
-				text-align: center;
 			}
 		}
+	}
+
+	a {
+		color: $font-color;
+		text-align: center;
 	}
 
 	form {
@@ -67,6 +70,6 @@
 	.login {
 		text-align: center;
 		font-size: 15px;
-		margin-top: 4px;
+		padding-top: 5px;
 	}
 }

@@ -42,6 +42,16 @@ body, html {
 	clear: both;
 }
 
+/* PROFILE BORDERS */
+
+.white-border {
+	@include profile-border;
+}
+
+.red-border {
+	@include profile-border($red);
+}
+
 @import "header.css.scss";
 @import "homepage.css.scss";
 @import "footer.css.scss";

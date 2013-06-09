@@ -1,0 +1,33 @@
+<div class="row usp">
+	<div class="span12">
+		<h3>Het antwoord op al je vragen over de 911 Targa</h3>
+	</div>
+
+	<%= render :partial => "shared/usp_item", 
+		:locals => { 
+			:image => 'Praatwolkjes',
+			:text  => 'Vragen stellen en antwoorden geven'
+		}
+	%>
+	<%= render :partial => "shared/usp_item", 
+		:locals => { 
+			:image => 'Duimpjes',
+			:text  => 'Beste vragen en antwoorden worden door jou gekozen'
+		}
+	%>
+	<%= render :partial => "shared/usp_item", 
+		:locals => { 
+			:image => 'Box',
+			:text  => 'Bedrijven en producten toevoegen aan reacties'
+		}
+	%>
+</div>
+
+<div class="row register-row">
+	<div class="span2 offset5">
+		<button>Registreer</button>
+	</div>
+	<div class="span2 offset3 company">
+		<a href="#">Registreer als bedrijf</a>
+	</div>
+</div>
