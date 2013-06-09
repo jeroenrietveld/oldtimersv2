@@ -1,7 +1,7 @@
 @mixin rounded-corner($amt: 5px) {
-	border-radius: $amt;
 	-moz-border-radius: $amt;
 	-webkit-border-radius: $amt;
+	border-radius: $amt;
 }
 
 @mixin profile-border($color: $white) {
