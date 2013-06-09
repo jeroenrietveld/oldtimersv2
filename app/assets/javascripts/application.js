@@ -14,3 +14,18 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function test(link, association, content) {
+	var value = $(".label-input").val();
+
+	if(value) {
+	  var new_id = new Date().getTime();
+	  var regexp = new RegExp("hidden_label", "g");
+		content = content.replace(regexp, new_id);
+
+		$(".label-input").val("");
+	  content = $(content).val(value);
+
+	  $(link).siblings(".labels").append(content);
+	}
+}
