@@ -4,7 +4,7 @@
 			<nav class="row">
 				<div class="span2 logo-placeholder"></div>
 				
-				<ul class="span3">
+				<ul class="span3 nav-items">
 					<li><a class="nav-item" href="#">Vragen</a></li>
 					<li><a class="nav-item" href="#">Bedrijven</a></li>
 				</ul>
@@ -20,8 +20,16 @@
 							<img src="" height="25" width="25" />
 						</div>
 					</div>
-					<div class="span1">
-						<%= link_to image_tag("edit_cog.png", :alt => "box", :width => 20, :height => 20, :class => "edit-cog"), destroy_user_session_path, :method => :delete %>
+					<div class="span1 btn-group">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							<%= image_tag("edit_cog.png", :alt => "box", :width => 20, :height => 20, :class => "edit-cog") %>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Profile</a></li>
+							<li>
+								<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+							</li>
+						</ul>
 					</div>
 				<% else %>
 					<div class="span2 login">

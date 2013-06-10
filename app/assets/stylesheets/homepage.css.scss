@@ -135,7 +135,8 @@
 	}
 }
 
-.questions {
+/* LATEST QUESTIONS */
+.filter-bar {
 	padding: 10px 0 5px 0;
 	height: auto;
 	border-bottom: 1px solid #BCBCBC;
@@ -157,9 +158,41 @@
 	}
 }
 
-/* LATEST QUESTIONS */
 .latest-questions {
-	
+	padding: 10px 0;
+
+	.row {
+		padding: 5px 0;
+	}
+
+	.question-info {
+		background: $white;
+		@include box-shadow;
+		@include rounded-corner;
+		padding: 5px 25px;
+	}
+
+	.title {
+		font-size: 18px;
+
+		a {
+			color: $font-color;
+		}
+	}
+
+	.category {
+		margin: 0;
+	}
+
+	.creation-date {
+		text-align: right;
+	}
+
+	.comment, .favorite {
+		display: inline;
+		float: right;
+		margin-left: 20px;
+	}
 }
 
 /* SELECT2 */

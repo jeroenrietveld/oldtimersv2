@@ -13,3 +13,7 @@
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2));
 	background-image: -moz-linear-gradient(0% 0% 270deg, $color1, $color2);
 }
+
+@mixin box-shadow {
+	box-shadow: 3px 3px 4px 0 #e0dfdf;
+}
