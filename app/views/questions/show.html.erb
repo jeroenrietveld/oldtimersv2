@@ -1,0 +1,26 @@
+<div class="question">
+	<div class="container">
+		<div class="row">
+			<span class="span2 offset9 created-at">
+				<i><%= @question.created_at.strftime('%H:%M %m/%d/%Y') %></i>
+			</span>
+			<div class="span1">
+			</div>
+		</div>
+		<div class="row">
+			<div class="span1 offset1">
+				<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :username => current_user.email } %>
+			</div>
+			<article class="span9 asked-question">
+				<header>
+					<h1 class="title">
+						<%= @question.title %>
+					</h1>
+				</header>
+			</article>
+			<div class="span1">
+				Sharing
+			</div>
+		</div>
+	</div>
+</div>
