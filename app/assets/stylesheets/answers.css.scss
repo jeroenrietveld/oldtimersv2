@@ -1,0 +1,14 @@
+.question {
+	padding: 30px 0;
+
+	.created-at {
+		text-align: right;
+	}
+
+	.asked-question {
+		background: $white;
+		height: 100px;
+		@include rounded-corner;
+		@include box-shadow;
+	}
+}
