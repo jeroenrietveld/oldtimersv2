@@ -7,6 +7,8 @@ gem 'devise', '3.0.0.rc'
 
 group :development do
   gem 'sqlite3', '1.3.7'
+  gem 'rvm-capistrano'
+  gem 'capistrano'
 end
 
 gem 'sass-rails', '4.0.0.rc1'

@@ -1,10 +1,16 @@
+require "bundler/capistrano"
 require "rvm/capistrano"
+
 set :rvm_type, :user
 default_run_options[:pty] = true  # Must be set for the password prompt
+ssh_options[:forward_agent] = true
+ssh_options[:auth_methods] = ["publickey"]
+ssh_options[:keys] = ["~/Downloads/jeroen.pem"]
 set :application, "oldtimers"
 set :repository,  "git@github.com:jeroenrietveld/oldtimersv2.git"
 set :branch, "master"
 set :deploy_via, :remote_cache
+#set :use_sudo, true
  
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
