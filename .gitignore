@@ -16,5 +16,5 @@
 /tmp
 
 #ignore cap files
-#/config/deploy*
-#/Capfile
+/config/deploy*
+/Capfile
