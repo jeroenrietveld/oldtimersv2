@@ -26,3 +26,7 @@ end
 group :production do
   gem 'pg', '0.15.1'
 end
+
+group :assets do
+  gem 'compass-rails'
+end
