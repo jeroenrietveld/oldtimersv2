@@ -50,10 +50,15 @@ class QuestionsController < ApplicationController
 
   # PATCH/PUT /questions/1
   def update
-    if @question.update(question_params)
-      redirect_to @question, notice: 'Question was successfully updated.'
+    @answer = Answer.new(answer_params)
+    @answer.user = current_user
+    @question = Question.find(params[:id])
+    @question.answers << @answer
+
+    if @question.save
+      redirect_to @question
     else
-      render action: 'edit'
+      render 'show'
     end
   end
 
@@ -72,5 +77,9 @@ class QuestionsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def question_params
       params.require(:question).permit(:title, :description)
+    end
+
+    def answer_params
+      params.require(:question).require(:answers).permit(:description)
     end
 end

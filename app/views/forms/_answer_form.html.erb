@@ -1,0 +1,22 @@
+<%= form_for @question do |f| %>
+	<%= render 'shared/error_messages' %>
+	<div class="span9">
+		<%= f.fields_for :answers do |builder| %>
+		 	<%= builder.text_area :description, { :placeholder => "Klik om te reageren", :class => "span9", :rows => 6 } %>
+		<% end %>
+	</div>
+	<div class="span9 offset2 buttons">
+		<button>
+			<%= image_tag("location_marker.png", :alt => "Bedrijf toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> Bedrijf toevoegen
+		</button>
+		<button>
+			<%= image_tag("add_icon.png", :alt => "Product toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> 
+			Product toevoegen
+		</button>
+		<button>
+			<%= image_tag("camera_icon.png", :alt => "Foto toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> 
+			Foto toevoegen
+		</button>
+	</div>
+	<%= f.submit "Reageer", :class => 'button span2 pull-right' %>
+<% end %>

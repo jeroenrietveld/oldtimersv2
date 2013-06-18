@@ -46,62 +46,102 @@
 			}
 		}
 	}
+}
+.answer-form {
+	background: $blue;
+	padding: 20px 0;
 
-	.answer-form {
-		background: $blue;
-		padding: 20px 0;
+	textarea {
+		resize: none;
+		border-radius: 4px 4px 0 0;
+		margin-bottom: 0px;
+	}
 
-		textarea {
-			resize: none;
-			border-radius: 4px 4px 0 0;
-			margin-bottom: 0px;
-		}
+	.buttons {
 
-		.buttons {
+		button, .button {
+			background: $white;
+			float: left;
+			border: 1px solid #ccc;
+			border-top: none;
+			height: 40px;
+			width: 233px;
 
-			button, .button {
-				background: $white;
-				float: left;
-				border: 1px solid #ccc;
-				border-top: none;
-				height: 40px;
-				width: 233px;
-
-				img {
-					margin-right: 10px;
-				}
-			}
-
-			button:hover, input[type=submit]:hover {
-				background: darken($white, 5%);
-			}
-
-			:first-child {
-				border-right: none;
-				border-bottom-left-radius: 4px;
-			}
-			:last-child {
-				border-bottom-right-radius: 4px;
-				border-left: none;
+			img {
+				margin-right: 10px;
 			}
 		}
 
-		input[type="submit"] {
-			margin-top: 10px;
-			margin-right: 100px;
-			width: 85px;
-			height: 33px;
-			@include rounded-corner;
-			border: none;
-			color: $white;
-			@include gradient;
+		button:hover, input[type=submit]:hover {
+			background: darken($white, 5%);
+		}
+
+		:first-child {
+			border-right: none;
+			border-bottom-left-radius: 4px;
+		}
+		:last-child {
+			border-bottom-right-radius: 4px;
+			border-left: none;
 		}
 	}
 
-	.filter-bar {
-		padding: 10px 0 5px 0;
-		height: auto;
-		border-bottom: 1px solid #BCBCBC;
-		font-size: 16px;
+	input[type="submit"] {
+		margin-top: 10px;
+		margin-right: 100px;
+		width: 85px;
+		height: 33px;
+		@include rounded-corner;
+		border: none;
+		color: $white;
+		@include gradient;
+	}
+}
+
+.filter-bar {
+	padding: 10px 0 5px 0;
+	height: auto;
+	border-bottom: 1px solid #BCBCBC;
+	font-size: 16px;
+}
+
+.answers {
+	padding: 30px 0;
+
+	.answer-bubble {
+		background: $white;
+		padding: 5px 0;
+		@include rounded-corner;
+		@include box-shadow;
+
+		.answer-user {
+			border-bottom: 1px solid $grey;
+			padding: 5px 25px;
+
+			.level {
+				font-weight: normal;
+				font-size: 12px;
+			}
+			.created-at {
+				font-weight: normal;
+			}
+		}
+
+		.answer {
+			padding: 5px 25px;
+		}
+
+		.actions {
+			padding: 5px 25px;
+			border-top: 1px solid $grey;
+
+			.like {
+				padding-right: 10px;
+			}
+
+			.comment {
+				padding-left: 10px;
+			}
+		}
 	}
 }

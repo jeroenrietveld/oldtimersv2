@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="span1 offset1">
+		<%= render :partial => "shared/profile_image", :locals => { :border => "white-border" } %>
+	</div>
+
+	<div class="span8 answer-bubble">
+		<div class="answer-user">
+	    <%= answer.user.email %>
+	    <span class="level">User level</span>
+	    <i class="pull-right created-at"><%= distance_of_time_in_words answer.created_at, Time.now %> geleden</i>
+	  </div>
+
+	  <div class="answer">
+	  	<%= answer.description %>
+	  </div>
+
+	  <div class="actions">
+	  	<div class="like pull-left">
+	  		<%= image_tag("thumbs_up.png", :alt => "Thumbs up", :width => "15", :height => "15")%>
+	  		20 Duimpjes
+	  	</div>
+	  	<div class="best-answer pull-left">
+				<%= image_tag("best_answer.png", :alt => "Best answer", :width => "15", :height => "15")%>
+				Beste antwoord
+	  	</div>
+
+	  	<div class="comment pull-right">
+	  		<%= image_tag("comment_icon.png", :alt => "Comment", :width => "20", :height => "20")%>
+	  	</div>
+	  	<div class="flag pull-right">
+	  		<%= image_tag("flag_icon.png", :alt => "Flag", :width => "20", :height => "20")%>
+	  	</div>
+	  </div>
+	</div>
+</div>

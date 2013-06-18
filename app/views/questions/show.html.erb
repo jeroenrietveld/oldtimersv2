@@ -1,73 +1,62 @@
-<div class="question">
-	<div class="container">
-		<div class="row">
-			<div class="span1 offset1">
-				<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :username => @question.user.email } %>
+<div class="container question">
+	<div class="row">
+		<div class="span1 offset1">
+			<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :username => @question.user.email } %>
+		</div>
+		<article class="span9 asked-question">
+			<div class="user-info">
+				<%= @question.user.email %>
+				<span class="level">User level</span>
+				<i class="pull-right created-at"><%= @question.created_at.strftime('%H:%M %m/%d/%Y') %></i>
 			</div>
-			<article class="span9 asked-question">
-				<div class="user-info">
-					<%= @question.user.email %>
-					<span class="level">User level</span>
-					<i class="pull-right created-at"><%= @question.created_at.strftime('%H:%M %m/%d/%Y') %></i>
+			<div class="question-details">
+				<header>
+					<h1 class="title">
+						<%= @question.title %>
+					</h1>
+				</header>
+				<div class="detail">
+					<%= @question.description %>
 				</div>
-				<div class="question-details">
-					<header>
-						<h1 class="title">
-							<%= @question.title %>
-						</h1>
-					</header>
-					<div class="detail">
-						<%= @question.description %>
-					</div>
-				</div>
-				<div class="question-labels">
-					<% @question.labels.each do |l, index| %>
-						<div class="span3 question-label <% unless index == 3 %>label-border<% end %>">asd</div>
-					<% end %>
-				</div>
-			</article>
-			<div class="span1">
-				Sharing
 			</div>
+			<div class="question-labels">
+				<% @question.labels.each do |l, index| %>
+					<div class="span3 question-label <% unless index == 3 %>label-border<% end %>">asd</div>
+				<% end %>
+			</div>
+		</article>
+		<div class="span1">
+			Sharing
 		</div>
 	</div>
+</div>
 
-	<div class="answer-form">
-		<div class="container">
-			<div class="row">
+<div class="answer-form">
+	<div class="container">
+		<div class="row">
+			<% if user_signed_in? %>
 				<div class="span1 offset1">
 					<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :username => @question.user.email } %>
 				</div>
-				<div class="span9">
-					<textarea class="span9" rows="6" placeholder="Klik om te reageren"></textarea>
-				</div>
-				<div class="span9 offset2 buttons">
-					<button>
-						<%= image_tag("location_marker.png", :alt => "Bedrijf toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> Bedrijf toevoegen
-					</button>
-					<button>
-						<%= image_tag("add_icon.png", :alt => "Product toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> 
-						Product toevoegen
-					</button>
-					<button>
-						<%= image_tag("camera_icon.png", :alt => "Foto toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> 
-						Foto toevoegen
-					</button>
-				</div>
-				<%#<%= f.submit "Antwoord", :class => "span2 pull-right offset1" %>
-				<input type="submit" class="span2 pull-right" value="Reageer" />
-			</div>
+				<%= render :partial => "forms/answer_form" %>
+			<% else %>
+				Log in.
+			<% end %>
 		</div>
 	</div>
+</div>
 
-	<div class="filter-bar">
-		<div class="container">
-			<div class="span2 offset1">4 Reacties</div>
-			<div class="span2 offset6">Filter</div>
-		</div>
+<div class="filter-bar">
+	<div class="container">
+		<div class="span2 offset1">4 Reacties</div>
+		<div class="span2 offset6">Filter</div>
 	</div>
+</div>
 
-	<div class="answers">
-		
+<div class="answers">
+	<div class="container">
+		<% @question.answers.each do |a| %>
+			<%= render :partial => "shared/answer_template", :locals => { :answer => a} %>
+		<% end %>
 	</div>
 </div>
