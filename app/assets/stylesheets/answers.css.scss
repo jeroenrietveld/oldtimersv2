@@ -99,6 +99,9 @@
 	}
 
 	.filter-bar {
-		border-bottom: 1px solid $grey;
+		padding: 10px 0 5px 0;
+		height: auto;
+		border-bottom: 1px solid #BCBCBC;
+		font-size: 16px;
 	}
 }
