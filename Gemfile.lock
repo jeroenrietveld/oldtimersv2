@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/jeroenrietveld/make_flaggable.git
+  revision: 6e29188d969ff1888ef8dd51923c73202053983c
+  specs:
+    make_flaggable (0.1.0)
+      activerecord (>= 3.0.0)
+      protected_attributes
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -85,6 +93,8 @@ GEM
     orm_adapter (0.4.0)
     pg (0.15.1)
     polyglot (0.3.3)
+    protected_attributes (1.0.1)
+      activemodel (>= 4.0.0.beta, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -155,7 +165,9 @@ DEPENDENCIES
   devise (= 3.0.0.rc)
   jbuilder (= 1.0.2)
   jquery-rails (= 2.2.1)
+  make_flaggable!
   pg (= 0.15.1)
+  protected_attributes
   rails (= 4.0.0.rc1)
   rvm-capistrano
   sass-rails (= 4.0.0.rc1)

@@ -18,6 +18,8 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'select2-rails'
 gem 'sqlite3', '1.3.7'
+gem 'protected_attributes'
+gem 'make_flaggable', :git => 'git://github.com/jeroenrietveld/make_flaggable.git'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
