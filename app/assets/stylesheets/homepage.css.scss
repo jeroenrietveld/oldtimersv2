@@ -173,7 +173,7 @@
 	padding: 10px 0;
 
 	.row {
-		padding: 5px 0;
+		padding: 15px 0;
 	}
 
 	.question-info {
@@ -187,6 +187,7 @@
 		}
 		.question-user {
 			border-bottom: 1px solid $grey;
+			padding-bottom: 5px;
 
 			.level {
 				font-weight: normal;
@@ -197,28 +198,29 @@
 				font-weight: normal;
 			}
 		}
-	}
+		.question-title {
+			font-size: 18px;
+			margin: 5px 0;
 
-	.title {
-		font-size: 18px;
-
-		a {
-			color: $font-color;
+			a {
+				color: $font-color;
+			}
 		}
-	}
+		.category {
+			padding: 0;
+		}
+		.actions {
+			padding: 0;
 
-	.category {
-		margin: 0;
-	}
+			.comment, .favorite {
+				display: inline;
+				float: right;
+			}
 
-	.creation-date {
-		text-align: right;
-	}
-
-	.comment, .favorite {
-		display: inline;
-		float: right;
-		padding-right: 0px;
+			.favorite {
+				padding-right: 25px;
+			}
+		}
 	}
 }
 

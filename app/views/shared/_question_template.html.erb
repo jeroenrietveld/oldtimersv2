@@ -7,29 +7,28 @@
     <span class="level">User level</span>
     <i class="pull-right created-at"><%= distance_of_time_in_words question.created_at, Time.now %> geleden</i>
   </div>
-	<div class="pull-left">
-		<p class="title"><%= link_to question.title, question %></p>
-		<p class="category">
-			<strong>Categorie:</strong>
+	
+  <div class="question-title">
+    <%= link_to question.title, question %>
+  </div>
+
+  <div>
+    <div class="pull-left category">
+      <strong>Categorie:</strong>
       <% question.categories.each_with_index do |c, i| %>
         <%= c.title %><% if i+1 != question.categories.length %>, <% end %>
       <% end %>
-    </p>
-	</div>
-
-	<div class="pull-right">
-		<p class="creation-date">
-      <i></i>
-    </p>
-    
-    <section class="comment">
-      <%= image_tag("comment.png", :alt => "Comment", :width => 20, :height => 20 ) %>
-      <span class="amt">2</span>
-    </section>
-    
-    <section class="favorite">
-      <%= image_tag("favorite.png", :alt => "Favorite", :width => 20, :height => 20 ) %>
-      <span class="amt">5 Volgers</span>
-    </section>
-	</div>
+    </div>
+    <div class="pull-right actions">
+      <section class="comment">
+        <%= image_tag("comment.png", :alt => "Comment", :width => 20, :height => 20 ) %>
+        <span class="amt">2</span>
+      </section>
+      
+      <section class="favorite">
+        <%= image_tag("favorite.png", :alt => "Favorite", :width => 20, :height => 20 ) %>
+        <span class="amt">5 Volgers</span>
+      </section>
+    </div>
+  </div>
 </div>
