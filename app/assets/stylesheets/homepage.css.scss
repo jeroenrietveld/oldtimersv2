@@ -180,7 +180,23 @@
 		background: $white;
 		@include box-shadow;
 		@include rounded-corner;
-		padding: 5px 25px;
+		padding: 5px 0;
+		
+		div {
+			padding: 0 25px;
+		}
+		.question-user {
+			border-bottom: 1px solid $grey;
+
+			.level {
+				font-weight: normal;
+				font-size: 12px;
+			}
+
+			.created-at {
+				font-weight: normal;
+			}
+		}
 	}
 
 	.title {
@@ -202,7 +218,7 @@
 	.comment, .favorite {
 		display: inline;
 		float: right;
-		margin-left: 20px;
+		padding-right: 0px;
 	}
 }
 

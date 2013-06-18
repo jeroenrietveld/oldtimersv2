@@ -5,7 +5,7 @@
 }
 
 @mixin profile-border($color: $white) {
-	@include rounded-corner;
+	@include rounded-corner(50em);
 	border: 4px solid $color;
 }
 
