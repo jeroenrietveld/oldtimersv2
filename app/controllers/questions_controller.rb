@@ -68,6 +68,10 @@ class QuestionsController < ApplicationController
     redirect_to questions_url, notice: 'Question was successfully destroyed.'
   end
 
+  def like
+    set_question
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question

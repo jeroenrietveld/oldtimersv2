@@ -29,6 +29,33 @@ $(document).ready(function() {
   	width: 'resolve',
   	placeholder: 'Selecteer passende categorieën'
   });
+
+  $(".like").hover(function(){
+  	if($(this).attr("data-clickable")) {
+    	$(this).find('img').attr('src', '/assets/thumbs_up_highlight.png');
+    }
+  }, function(){
+  	if($(this).attr("data-clickable")) {
+	    $(this).find('img').attr('src', '/assets/thumbs_up.png');
+	  }
+  });
+
+  $(".like").click(function() {
+  	if($(this).attr("data-clickable")) {
+			if (!window.location.origin) window.location.origin = window.location.protocol+"//"+window.location.host;
+
+			var id = $(this).parent(".actions").data('id');
+
+			var self = $(this);
+
+			$.post(window.location.origin+"/answers/"+id+"/like", function(data) {
+				if(data == true) {
+					self.removeAttr("data-clickable");
+					$(this).find('img').attr('src', '/assets/thumbs_up_highlight.png');
+				}
+			});
+		}
+  });
 });
 
 function test(link, association, content) {

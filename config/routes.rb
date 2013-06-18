@@ -6,6 +6,8 @@ Oldtimersv2::Application.routes.draw do
   root :to => "general_pages#home"
 
   resources :questions
+
+  post "answers/:id/like" => "answers#like"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

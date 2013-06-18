@@ -14,10 +14,12 @@
 	  	<%= answer.description %>
 	  </div>
 
-	  <div class="actions">
-	  	<div class="like pull-left">
-	  		<%= image_tag("thumbs_up.png", :alt => "Thumbs up", :width => "15", :height => "15")%>
-	  		20 Duimpjes
+	  <div class="actions" data-id="<%= answer.id %>">
+	  	<div class="like pull-left" <% unless current_user.flagged?(answer, :like) %>data-clickable="asd"<% end %> >
+	  		<%= image_tag(get_like_image(answer), :alt => "Thumbs up", :width => "15", :height => "15")%>
+
+	  		<% likes = answer.flaggings.with_flag(:like).count %>
+	  		<%= pluralize(likes, 'Duimpje') %>
 	  	</div>
 	  	<div class="best-answer pull-left">
 				<%= image_tag("best_answer.png", :alt => "Best answer", :width => "15", :height => "15")%>

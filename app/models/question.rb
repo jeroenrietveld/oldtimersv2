@@ -11,6 +11,4 @@ class Question < ActiveRecord::Base
 
 	accepts_nested_attributes_for :categories, :reject_if => lambda { |l| l[:title].blank? }, allow_destroy: true
 	accepts_nested_attributes_for :labels, :reject_if => lambda { |l| l[:title].blank? }, allow_destroy: true
-
-	make_flaggable :like
 end
