@@ -16,7 +16,7 @@
 
 		<% if user_signed_in? %>
 			<div class="actions" data-id="<%= answer.id %>">
-				<div class="like pull-left" <% unless current_user.flagged?(answer, :like) %>data-clickable="asd"<% end %> >
+				<div class="like pull-left" <% unless current_user.flagged?(answer, :like) %>data-clickable="true"<% end %> >
 					<%= image_tag(get_like_image(answer), :alt => "Thumbs up", :width => "15", :height => "15")%>
 
 					<% likes = answer.flaggings.with_flag(:like).count %>
@@ -30,7 +30,7 @@
 					</div>
 				<% end %>
 
-				<div class="comment pull-right">
+				<div class="comment pull-right" data-hoverable="true">
 					<%= image_tag("comment_icon.png", :alt => "Comment", :width => "20", :height => "20")%>
 				</div>
 				<div class="flag pull-right">

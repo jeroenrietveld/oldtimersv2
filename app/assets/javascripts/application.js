@@ -30,13 +30,15 @@ $(document).ready(function() {
   	placeholder: 'Selecteer passende categorieën'
   });
 
-  $(".like").hover(function(){
-  	if($(this).attr("data-clickable")) {
-    	$(this).find('img').attr('src', '/assets/thumbs_up_highlight.png');
+  $(".actions div").hover(function(){
+  	if($(this).attr("data-clickable") || $(this).attr("data-hoverable")) {
+    	var img = $(this).children('img').attr('src').match(/(\w+).png/)[1];
+    	$(this).find('img').attr('src', "/assets/" + img + "_highlight.png");
     }
   }, function(){
-  	if($(this).attr("data-clickable")) {
-	    $(this).find('img').attr('src', '/assets/thumbs_up.png');
+  	if($(this).attr("data-clickable") || $(this).attr("data-hoverable")) {
+	    var img = $(this).find('img').attr('src').split('_highlight.png')[0];
+	    $(this).find('img').attr('src', img + ".png");
 	  }
   });
 

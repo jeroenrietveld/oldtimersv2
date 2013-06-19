@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130618195902) do
+ActiveRecord::Schema.define(version: 20130619210208) do
 
   create_table "answers", force: true do |t|
     t.integer  "question_id"
@@ -36,6 +36,16 @@ ActiveRecord::Schema.define(version: 20130618195902) do
 
   add_index "categories_questions", ["category_id"], name: "index_categories_questions_on_category_id"
   add_index "categories_questions", ["question_id"], name: "index_categories_questions_on_question_id"
+
+  create_table "comments", force: true do |t|
+    t.integer  "answer_id"
+    t.integer  "user_id"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["answer_id", "created_at"], name: "index_comments_on_answer_id_and_created_at"
 
   create_table "flaggings", force: true do |t|
     t.string   "flaggable_type"
