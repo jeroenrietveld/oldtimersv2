@@ -5,33 +5,38 @@
 
 	<div class="span8 answer-bubble">
 		<div class="answer-user">
-	    <%= answer.user.email %>
-	    <span class="level">User level</span>
-	    <i class="pull-right created-at"><%= distance_of_time_in_words answer.created_at, Time.now %> geleden</i>
-	  </div>
+			<%= answer.user.email %>
+			<span class="level">User level</span>
+			<i class="pull-right created-at"><%= distance_of_time_in_words answer.created_at, Time.now %> geleden</i>
+		</div>
 
-	  <div class="answer">
-	  	<%= answer.description %>
-	  </div>
+		<div class="answer">
+			<%= answer.description %>
+		</div>
 
-	  <div class="actions" data-id="<%= answer.id %>">
-	  	<div class="like pull-left" <% unless current_user.flagged?(answer, :like) %>data-clickable="asd"<% end %> >
-	  		<%= image_tag(get_like_image(answer), :alt => "Thumbs up", :width => "15", :height => "15")%>
+		<% if user_signed_in? %>
+			<div class="actions" data-id="<%= answer.id %>">
+				<div class="like pull-left" <% unless current_user.flagged?(answer, :like) %>data-clickable="asd"<% end %> >
+					<%= image_tag(get_like_image(answer), :alt => "Thumbs up", :width => "15", :height => "15")%>
 
-	  		<% likes = answer.flaggings.with_flag(:like).count %>
-	  		<%= pluralize(likes, 'Duimpje') %>
-	  	</div>
-	  	<div class="best-answer pull-left">
-				<%= image_tag("best_answer.png", :alt => "Best answer", :width => "15", :height => "15")%>
-				Beste antwoord
-	  	</div>
+					<% likes = answer.flaggings.with_flag(:like).count %>
+					<%= pluralize(likes, 'Duimpje') %>
+				</div>
 
-	  	<div class="comment pull-right">
-	  		<%= image_tag("comment_icon.png", :alt => "Comment", :width => "20", :height => "20")%>
-	  	</div>
-	  	<div class="flag pull-right">
-	  		<%= image_tag("flag_icon.png", :alt => "Flag", :width => "20", :height => "20")%>
-	  	</div>
-	  </div>
+				<% if current_user == answer.user %>
+					<div class="best-answer pull-left">
+						<%= image_tag("best_answer.png", :alt => "Best answer", :width => "15", :height => "15")%>
+						Beste antwoord
+					</div>
+				<% end %>
+
+				<div class="comment pull-right">
+					<%= image_tag("comment_icon.png", :alt => "Comment", :width => "20", :height => "20")%>
+				</div>
+				<div class="flag pull-right">
+					<%= image_tag("flag_icon.png", :alt => "Flag", :width => "20", :height => "20")%>
+				</div>
+			</div>
+		<% end %>
 	</div>
 </div>
