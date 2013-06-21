@@ -1,3 +1,41 @@
+/* =========================================================== *\
+|* Q&A Bubble - basics
+\* =========================================================== */
+.q-a-bubble {
+	.user-info {
+		padding: 5px 0 5px 15px;
+		border-bottom: 1px solid $grey;
+		font-weight: 800;
+
+		.level {
+			font-weight: normal;
+			font-size: 12px;
+			padding-left: 5px;
+		}
+
+		.created-at {
+			font-weight: normal;
+			padding-right: 10px;
+		}
+	}
+	.q-a-description {
+		padding: 10px 15px;
+
+		h1 {
+			font-size: 22px;
+			font-weight: bold;
+			margin: 0;
+		}
+	}
+	.q-a-options {
+		padding: 5px 15px;
+		border-top: 1px solid $grey;
+	}
+}
+
+/* =========================================================== *\
+|* Question bubble
+\* =========================================================== */
 .question {
 	padding: 30px 0;
 
@@ -7,35 +45,9 @@
 		@include rounded-corner(2px);
 		@include box-shadow;
 
-		.user-info {
-			padding: 5px 0 5px 15px;
-			border-bottom: 1px solid $grey;
-			font-weight: 800;
-
-			.level {
-				font-weight: normal;
-				font-size: 12px;
-				padding-left: 5px;
-			}
-
-			.created-at {
-				font-weight: normal;
-				padding-right: 10px;
-			}
-		}
-
-		.question-details {
-			border-bottom: 1px solid $grey;
-			padding: 0 0 10px 15px;
-
-			h1 {
-				font-size: 22px;
-				font-weight: bold;
-			}
-		}
-
 		.question-labels {
 			text-align: center;
+			padding: 0 15px;
 	
 			.question-label {
 				padding: 5px 0;
@@ -47,6 +59,10 @@
 		}
 	}
 }
+
+/* =========================================================== *\
+|* Answer form
+\* =========================================================== */
 .answer-form {
 	background: $blue;
 	padding: 20px 0;
@@ -98,6 +114,9 @@
 	}
 }
 
+/* =========================================================== *\
+|* Answer filter bar
+\* =========================================================== */
 .filter-bar {
 	padding: 10px 0 5px 0;
 	height: auto;
@@ -105,35 +124,20 @@
 	font-size: 16px;
 }
 
+/* =========================================================== *\
+|* Answer (and comment) bubbles
+\* =========================================================== */
 .answers {
 	padding: 30px 0;
 
 	.answer-bubble {
 		background: $white;
-		padding: 5px 0;
 		@include rounded-corner;
 		@include box-shadow;
 
-		.answer-user {
-			border-bottom: 1px solid $grey;
-			padding: 5px 25px;
-
-			.level {
-				font-weight: normal;
-				font-size: 12px;
-			}
-			.created-at {
-				font-weight: normal;
-			}
-		}
-
-		.answer {
-			padding: 5px 25px;
-		}
-
 		.actions {
-			padding: 5px 25px;
-			border-top: 1px solid $grey;
+			padding-top: 5px;
+			padding-bottom: 5px;
 
 			.like {
 				padding-right: 10px;
@@ -149,30 +153,8 @@
 
 		.comment-bubble {
 			background: $white;
-			padding: 5px 0;
 			@include rounded-corner;
 			@include box-shadow;
-
-			.comment-user {
-				border-bottom: 1px solid $grey;
-				padding: 5px 25px;
-
-				.level {
-					font-weight: normal;
-					font-size: 12px;
-				}
-				.created-at {
-					font-weight: normal;
-				}
-			}
-
-			.comment {
-				padding: 5px 25px;
-			}
-			.actions {
-				padding: 5px 25px;
-				border-top: 1px solid $grey;
-			}
 		}
 	}
 }

@@ -3,13 +3,13 @@
 		<div class="span1 offset1">
 			<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :username => @question.user.email } %>
 		</div>
-		<article class="span9 asked-question">
+		<article class="span9 asked-question q-a-bubble">
 			<div class="user-info">
 				<%= @question.user.email %>
 				<span class="level">User level</span>
 				<i class="pull-right created-at"><%= @question.created_at.strftime('%H:%M %m/%d/%Y') %></i>
 			</div>
-			<div class="question-details">
+			<div class="q-a-description question-details">
 				<header>
 					<h1 class="title">
 						<%= @question.title %>
@@ -19,7 +19,7 @@
 					<%= @question.description %>
 				</div>
 			</div>
-			<div class="question-labels">
+			<div class="q-a-options question-labels">
 				<% @question.labels.each do |l, index| %>
 					<div class="span3 question-label <% unless index == 3 %>label-border<% end %>">asd</div>
 				<% end %>
