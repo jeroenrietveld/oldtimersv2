@@ -39,4 +39,37 @@
 			</div>
 		<% end %>
 	</div>
+	<div class="clearfix"></div>
+	<div class="comments">
+		<% answer.comments.each do |c| %>
+			<div class="span7 offset3 comment-bubble">
+				<div class="comment-user">
+					<%= c.user.email %>
+					<span class="level">User level</span>
+					<i class="pull-right created-at"><%= distance_of_time_in_words c.created_at, Time.now %> geleden</i>
+				</div>
+				
+				<div class="comment">
+					<%= c.description %>
+				</div>
+
+				<% if user_signed_in? %>
+					<div class="actions" data-id="<%= answer.id %>">
+						<div class="like pull-left" <% unless current_user.flagged?(c, :like) %>data-clickable="true"<% end %> >
+							<%= image_tag(get_like_image(c), :alt => "Thumbs up", :width => "15", :height => "15")%>
+
+							<% likes = c.flaggings.with_flag(:like).count %>
+							<%= pluralize(likes, 'Duimpje') %>
+						</div>
+						<div class="flag pull-right">
+							<%= image_tag("flag_icon.png", :alt => "Flag", :width => "20", :height => "20")%>
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<div class="span1 comment-user-profile">
+				<%= render :partial => "shared/profile_image", :locals => { :border => "white-border" } %>
+			</div>
+		<% end %>
+	</div>
 </div>

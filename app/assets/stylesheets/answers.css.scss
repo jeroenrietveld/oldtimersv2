@@ -144,4 +144,35 @@
 			}
 		}
 	}
+	.comments {
+		padding: 10px 0;
+
+		.comment-bubble {
+			background: $white;
+			padding: 5px 0;
+			@include rounded-corner;
+			@include box-shadow;
+
+			.comment-user {
+				border-bottom: 1px solid $grey;
+				padding: 5px 25px;
+
+				.level {
+					font-weight: normal;
+					font-size: 12px;
+				}
+				.created-at {
+					font-weight: normal;
+				}
+			}
+
+			.comment {
+				padding: 5px 25px;
+			}
+			.actions {
+				padding: 5px 25px;
+				border-top: 1px solid $grey;
+			}
+		}
+	}
 }
