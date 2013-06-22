@@ -9,6 +9,11 @@ class RegistrationsController < Devise::RegistrationsController
 		resource.email = sign_up_params[:email]
 		resource.password = sign_up_params[:password]
 		resource.password_confirmation = sign_up_params[:password_confirmation]
+    resource.username = sign_up_params[:username]
+    resource.first_name = sign_up_params[:first_name]
+    resource.last_name = sign_up_params[:last_name]
+    resource.level = 0
+    resource.points = 0
 
     if resource.save
       if resource.active_for_authentication?
