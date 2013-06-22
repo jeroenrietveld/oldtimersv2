@@ -54,3 +54,6 @@ nl:
       attributes:
         password:
           blank: 'Wachtwoord'
+          too_short: 'Wachtwoord moet minimaal 8 tekens bevatten'
+        username:
+          blank: 'Vul een username in'
