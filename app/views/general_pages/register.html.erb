@@ -1,0 +1,61 @@
+<div class="container register">
+	<div class="row">
+		<section class="span5 offset1 register-user type-button">
+			<header>
+				<%= image_tag("butzi_logo_white.png", :alt => "Butzi", :width => 100) %>
+				<span class="resource">Gebruiker</span>
+			</header>
+
+			<div class="type-info">
+				<div class="usp">
+					<%= image_tag("check_icon.png", :width => 15) %>
+					Vragen stellen en antwoorden geven
+				</div>
+				<div class="usp">
+					<%= image_tag("check_icon.png", :width => 15) %>
+					Beste antwoorden worden door jouw gekozen
+				</div>
+				<div class="usp">
+					<%= image_tag("check_icon.png", :width => 15) %>
+					Community gemaakt door de community zelf
+				</div>
+			</div>
+
+			<div class="select">
+				<input type="radio" id="user-select" name="resource-select" value="" checked>
+				<label for="user-select"></label>
+			</div>
+		</section>
+		<section class="span5 register-company type-button">
+			<header>
+				<%= image_tag("butzi_logo_white.png", :alt => "Butzi", :width => 100) %>
+				<span class="resource">Bedrijf</span>
+			</header>
+			
+			<div class="type-info">
+				<div class="usp">
+					<%= image_tag("check_icon.png", :width => 15) %>
+					Bedrijf word geplaatst in de bedrijven lijst
+				</div>
+				<div class="usp">
+					<%= image_tag("check_icon.png", :width => 15) %>
+					Bedrijf kan toegevoegd worden aan een reactie
+				</div>
+				<div class="usp">
+					<%= image_tag("check_icon.png", :width => 15) %>
+					Gebruikers kunnen het bedrijf makkelijk vinden
+				</div>
+			</div>
+			<div class="select">
+				<input type="radio" id="company-select" name="resource-select" value="">
+				<label for="company-select"></label>
+			</div>
+		</section>
+
+		<div class="clearfix"></div>
+
+		<div class="register-form span6 offset3">
+			
+		</div>
+	</div>
+</div>

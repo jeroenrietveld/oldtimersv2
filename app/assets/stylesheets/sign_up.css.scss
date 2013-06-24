@@ -1,35 +1,102 @@
 .sign-up {
+	background: $white;
+	box-shadow: 1px 1px 3px 0px #777;
+	padding: 5px 25px 30px 35px;
+	margin-top: 20px;
+	font-size: 16px;
+
+	margin: 50px auto 0;
+	width: 750px;
+
+	h1 {
+		font-size: 1.875em; /* 30px / 16px */
+	}
+
+	.info-block{
+		margin-bottom: 20px;
+	}
+
+	.field{
+		width: 45%;
+		margin: 5px 10px 5px 0px;
+	}
+
+	.register {
+		background: lighten($red, 5%);
+		color: $white;
+		text-decoration: none;
+		font-size: 18px;
+		padding: 15px 20px;
+	}
+
+	.register:hover {
+		background: $red;
+	}
+}
+
+/* =========================================================== *\
+|* User and Company register page
+\* =========================================================== */
+.register {
+	padding: 50px 0;
+
+	.type-button {
 		background: $white;
-		box-shadow: 1px 1px 3px 0px #777;
-		padding: 5px 25px 30px 35px;
-		margin-top: 20px;
-		font-size: 16px;
+		@include rounded-corner(2px);
+		@include box-shadow;
+		color: $white;
+		text-align: center;
+		font-weight: 200;
 
-		margin: 50px auto 0;
-		width: 750px;
+		header {
+			padding: 30px 0;
 
-		h1 {
-			font-size: 1.875em; /* 30px / 16px */
+			img {
+				padding-right: 3px;
+			}
+			.resource {
+				position: relative;
+				top: 12px;
+			}
 		}
 
-		.info-block{
-			margin-bottom: 20px;
+		.type-info {
+			padding: 20px 0 10px 30px;
+			color: $font-color;
+			text-align: left;
+
+			.usp {
+				padding: 7px 0;
+
+				img {
+					padding-right: 15px;
+				}
+			}
 		}
 
-		.field{
-			width: 45%;
-			margin: 5px 10px 5px 0px;
+		.select {
+			border-top: 1px solid $grey;
+			padding: 10px 0 5px 0;
 		}
-
-		.register {
-			background: lighten($red, 5%);
-			color: $white;
-			text-decoration: none;
-			font-size: 18px;
-			padding: 15px 20px;
+	}
+	
+	.register-user {
+		header {
+			background: $blue;
 		}
+	}
 
-		.register:hover {
+	.register-company {
+		header {
 			background: $red;
 		}
+	}
+
+	.register-form {
+		background: $white;
+		@include rounded-corner(2px);
+		@include box-shadow;
+		height: 100px;
+		margin-top: 30px;
+	}
 }
