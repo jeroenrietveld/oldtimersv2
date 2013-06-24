@@ -30,7 +30,7 @@
 		<div class="latest-questions">
 			<% fetch_latest_questions.each do |q| %>
 				<div class="row">
-					<%= render :partial => 'shared/question_template', :locals => { :question => q } %>
+					<%= render :partial => 'shared/question_template', :locals => { :question => q, :level => user_level(q.user.level) } %>
 				</div>
 			<% end %>
 		</div>

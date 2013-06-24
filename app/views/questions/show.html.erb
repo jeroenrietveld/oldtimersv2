@@ -6,8 +6,12 @@
 		<article class="span9 asked-question q-a-bubble">
 			<div class="user-info">
 				<%= @question.user.email %>
-				<span class="level">User level</span>
-				<i class="pull-right created-at"><%= @question.created_at.strftime('%H:%M %m/%d/%Y') %></i>
+				<span class="level <%= user_level(@question.user.level).downcase %>-level">
+		      <%= user_level(@question.user.level) %>
+		    </span>
+				<i class="pull-right created-at">
+					<%= @question.created_at.strftime('%H:%M %m/%d/%Y') %>
+				</i>
 			</div>
 			<div class="q-a-description question-details">
 				<header>
