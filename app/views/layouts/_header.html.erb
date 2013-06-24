@@ -30,18 +30,18 @@
 						<div class="dropdown-menu profile-dropdown logged-in span4">
 							<header class="form-header">
 				 				<div class="progress-bar-container">
-					 				<span><%= user_level(current_user.level) %></span>
+					 				<span class="level"><%= user_level(current_user.level) %></span>
 	      					<div class="progress progress-striped active">  
 									  <div class="bar"></div>  
 									</div>  
-									<span><%= next_level(current_user.level) %></span>
+									<span class="level"><%= next_level(current_user.level) %></span>
 									<div id="clearfix"></div>
 
 									<div class="rank-information">
 										<header><h2>35%</h2></header>
 										<section class="extra">
-											<header><h3>Rank 1</h3></header><br/>
-											<span>75 punten in totaal</span>
+											<p><%= user_level(current_user.level).capitalize %></p>
+											<span class="points">75 punten in totaal</span>
 										</section>
 										<div id="clearfix"></div>
 									</div>

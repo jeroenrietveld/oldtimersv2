@@ -5,4 +5,7 @@ class GeneralPagesController < ApplicationController
 			@question.labels.build
 		end
 	end
+
+	def register
+	end
 end

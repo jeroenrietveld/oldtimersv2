@@ -1,6 +1,8 @@
 Oldtimersv2::Application.routes.draw do
+  devise_for :companies
   devise_for :users, :controllers => {:registrations => "registrations"}
   get "general_pages/home"
+  get "general_pages/register", :path => 'register'
   post "general_pages/new"
 
   root :to => "general_pages#home"

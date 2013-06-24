@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130623154006) do
+ActiveRecord::Schema.define(version: 20130624100235) do
 
   create_table "answers", force: true do |t|
     t.integer  "question_id"
@@ -46,6 +46,24 @@ ActiveRecord::Schema.define(version: 20130623154006) do
   end
 
   add_index "comments", ["answer_id", "created_at"], name: "index_comments_on_answer_id_and_created_at"
+
+  create_table "companies", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "companies", ["email"], name: "index_companies_on_email", unique: true
+  add_index "companies", ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
 
   create_table "flaggings", force: true do |t|
     t.string   "flaggable_type"

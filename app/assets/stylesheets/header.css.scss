@@ -94,17 +94,17 @@ body > header {
 			height: auto;
 		}
 		.progress-bar-container {
-			span {
+			.level {
 				float: left; 
-				color: white; 
+				color: $white; 
 				width: 15%;
 				text-align: center;
-				margin:0px 3px;
+				margin: 0px 7px;
 				text-transform: capitalize;
 			}
 			.progress {
-				width: 65%;
-				float:left;
+				width: 58%;
+				float: left;
 				@include rounded-corner(15px);
 				
 				.bar {
@@ -121,18 +121,21 @@ body > header {
 
 				h2 {
 					font-size: 65px;
-					padding: 10px 0 0 15px;
+					padding-left: 15px;
+					font-weight: normal;
 				}
 			}
 			.extra {
-				float:right;
+				float: right;
 				width: 50%;
-				header{ 
+				padding-top: 5px;
+				font-size: 18px;
+
+				p {
 					width: 100%;
 				}
-				span {
-					position: relative;
-					bottom: 10px;
+				.points {
+					padding-top: 5px;
 				}
 			}
 		}

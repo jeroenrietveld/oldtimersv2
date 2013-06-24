@@ -87,6 +87,23 @@ button, input[type=submit] {
 	font-family: InterFace;
 }
 
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] + label {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+  background: url('<%= asset_path('radio_buttons.png') %>') left top no-repeat;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    background: url('<%= asset_path('radio_buttons.png') %>') -18px top no-repeat;
+}
+
 @import "header.css.scss";
 @import "homepage.css.scss";
 @import "sign_up.css.scss";
