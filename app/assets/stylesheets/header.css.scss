@@ -1,6 +1,9 @@
+body > header {
+	height: 50px;
+}
 .navigation {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	background: $white;
 	box-shadow: 0px 0px 5px 0px #777;
 	position: relative;
@@ -83,30 +86,57 @@
 		top: 32px;
 		padding: 0;
 
+		&.logged-in {
+			top: 37px;
+		}
+
 		form {
 			height: auto;
 		}
 		.progress-bar-container {
 			span {
-				float:left; 
-				color:white; 
-				width:7%;
+				float: left; 
+				color: white; 
+				width: 15%;
 				text-align: center;
-
-				&:first-child {
-					margin-left:15px;
-				}
+				margin:0px 3px;
+				text-transform: capitalize;
 			}
 			.progress {
-				width: 75%;
+				width: 65%;
 				float:left;
 				@include rounded-corner(15px);
 				
 				.bar {
-					width: 60%;
+					width: 35%;
 				}
 			}
 		}
+
+		.rank-information {
+			color: #fff;
+			header {
+				float: left;
+				width: 50%;
+
+				h2 {
+					font-size: 65px;
+					padding: 10px 0 0 15px;
+				}
+			}
+			.extra {
+				float:right;
+				width: 50%;
+				header{ 
+					width: 100%;
+				}
+				span {
+					position: relative;
+					bottom: 10px;
+				}
+			}
+		}
+
 		.row {
 				padding:0;
 			}
@@ -118,6 +148,27 @@
 				height: 50px;
 				background: #fff;
 				position: static;
+
+				.box-link {
+					width: 33%;
+					height: 100%;
+					margin: 0;
+					padding-top: 7px;
+					float: left;
+
+					a {
+						width: 100%;
+						display: block;
+						padding: 2px 0;
+					}
+
+					figcaption {
+						text-align:center;
+						a {
+							padding:0;
+						}
+					}
+				}
 			}
 
 			.login-form-forgot-password {

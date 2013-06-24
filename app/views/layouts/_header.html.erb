@@ -27,31 +27,46 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 							<%= image_tag("edit_cog.png", :alt => "box", :width => 20, :height => 20, :class => "edit-cog") %>
 						</a>
-						<div class="dropdown-menu profile-dropdown span4">
+						<div class="dropdown-menu profile-dropdown logged-in span4">
 							<header class="form-header">
 				 				<div class="progress-bar-container">
-					 				<span>1</span>
-	      					<div class="progress progress-striped">  
+					 				<span><%= user_level(current_user.level) %></span>
+	      					<div class="progress progress-striped active">  
 									  <div class="bar"></div>  
 									</div>  
-									<span>2</span>
+									<span><%= next_level(current_user.level) %></span>
 									<div id="clearfix"></div>
 
 									<div class="rank-information">
 										<header><h2>35%</h2></header>
 										<section class="extra">
-											<header><h3>Rank 1</h3></header>
+											<header><h3>Rank 1</h3></header><br/>
 											<span>75 punten in totaal</span>
 										</section>
-
+										<div id="clearfix"></div>
 									</div>
 
 								</div>
 								
 							</header>
 							<footer class="form-footer">
-								<a href="#">Profile</a>
-								<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+								<!--<a href="#">Profile</a>-->
+
+									<figure class="box-link">
+										<%= link_to(image_tag("profile.png", :alt => "profiel", :width => 20, :height => 20), destroy_user_session_path) %>
+										<figcaption><%= link_to "Profiel", destroy_user_session_path, :method => :delete %></figcaption>
+									</figure>
+
+									<figure class="box-link">
+										<%= link_to(image_tag("settings.png", :alt => "Instellingen", :width => 20, :height => 20), destroy_user_session_path) %>
+										<figcaption><%= link_to "Instellingen", destroy_user_session_path, :method => :delete %></figcaption>
+									</figure>
+
+									<figure class="box-link">
+										<%= link_to(image_tag("logout.png", :alt => "Log uit", :width => 20, :height => 20), destroy_user_session_path) %>
+										<figcaption><%= link_to "Uitloggen", destroy_user_session_path, :method => :delete %></figcaption>
+									</figure>
+
 							</footer>
 
 						</div>
