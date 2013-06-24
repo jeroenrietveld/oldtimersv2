@@ -13,4 +13,18 @@ module ApplicationHelper
 	def fetch_latest_questions
 		@questions = Question.find(:all, :order => "created_at DESC", :limit => 5)
 	end
+
+	def user_level(level)
+		return Rank.find_by_level(level).name
+	end
+
+	def next_level(level)
+		rank = Rank.find_by_level(level+1)
+
+		unless rank == nil
+			return rank.name
+		end
+
+		return "Max"
+	end
 end

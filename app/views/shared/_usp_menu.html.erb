@@ -1,34 +1,39 @@
 <section class="row usp">
-	<div class="span12 usp-title">
+	<div class="usp-title">
 		<header>
+			<%= image_tag("butzi_logo.png", :alt => "logo", :title => "logo", :width => 100) %>
 			<h1>Het antwoord op al je vragen over de 911 Targa</h1>
 		</header>
 	</div>
 
-	<%= render :partial => "shared/usp_item", 
-		:locals => { 
-			:image => 'Praatwolkjes',
-			:text  => 'Vragen stellen en antwoorden geven',
-			:title => 'Vraag en antwoord platform',
-			:alt => 'Praatwolkjes'
-		}
-	%>
-	<%= render :partial => "shared/usp_item", 
-		:locals => { 
-			:image => 'Duimpjes',
-			:text  => 'Beste vragen en antwoorden worden door jou gekozen',
-			:title => 'Gamification',
-			:alt => 'Likes'
-		}
-	%>
-	<%= render :partial => "shared/usp_item", 
-		:locals => { 
-			:image => 'Box',
-			:text  => 'Bedrijven en producten toevoegen aan reacties',
-			:title => 'Kwaliteits antwoorden',
-			:alt => 'Box'
-		}
-	%>
+	<div class="clearfix"></div>
+
+	<div class="usp-items">
+		<%= render :partial => "shared/usp_item", 
+			:locals => {
+				:image => 'Praatwolkjes.png',
+				:text  => 'Vragen stellen en antwoorden geven',
+				:title => 'Vraag en antwoord platform',
+				:alt => 'Praatwolkjes'
+			}
+		%>
+		<%= render :partial => "shared/usp_item",
+			:locals => {
+				:image => 'Duimpjes.png',
+				:text  => 'Beste vragen en antwoorden worden door jou gekozen',
+				:title => 'Gamification',
+				:alt => 'Likes'
+			}
+		%>
+		<%= render :partial => "shared/usp_item",
+			:locals => {
+				:image => 'Box.png',
+				:text  => 'Bedrijven en producten toevoegen aan reacties',
+				:title => 'Kwaliteits antwoorden',
+				:alt => 'Box'
+			}
+		%>
+	<div class="usp-items">
 </section>
 
 <div class="row register-row">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130622121510) do
+ActiveRecord::Schema.define(version: 20130623154006) do
 
   create_table "answers", force: true do |t|
     t.integer  "question_id"
@@ -79,6 +79,14 @@ ActiveRecord::Schema.define(version: 20130622121510) do
     t.integer  "user_id"
   end
 
+  create_table "ranks", force: true do |t|
+    t.integer  "level"
+    t.string   "name"
+    t.integer  "required_points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -95,6 +103,8 @@ ActiveRecord::Schema.define(version: 20130622121510) do
     t.string   "username"
     t.string   "first_name"
     t.string   "last_name"
+    t.integer  "level"
+    t.integer  "points"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

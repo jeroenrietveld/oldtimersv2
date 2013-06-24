@@ -22,22 +22,29 @@
 		text-align: center;
 
 		.usp-title {
-			padding-bottom: 40px;
+			padding: 20px 0;
+			border-bottom: 1px solid $grey;
 		}
 
 		h1 {
 			color: #B0ACA5;
 			text-transform: uppercase;
 			font-weight: normal;
-			font-size:24.5px;
+			font-size: 24.5px;
 		}
 
-		.usp-img {
-			text-align: center;
-			min-height: 70px;
-			padding-bottom: 2px;
+		.usp-items {
+			padding-top: 30px;
+			color: #B0ACA5;
+
+			.usp-img {
+				text-align: center;
+				min-height: 70px;
+				padding-bottom: 2px;
+			}
 		}
 	}
+
 
 	.register-row {
 		padding: 20px 0 10px 0;
@@ -177,49 +184,34 @@
 	.question-info {
 		background: $white;
 		@include box-shadow;
-		@include rounded-corner;
-		padding: 5px 0;
-		
-		div {
-			padding: 0 25px;
-		}
-		.question-user {
-			border-bottom: 1px solid $grey;
-			padding-bottom: 5px;
+		@include rounded-corner(2px);
+		padding: 5px 0 0 0;
 
-			.level {
-				font-weight: normal;
-				font-size: 12px;
-			}
-
-			.created-at {
-				font-weight: normal;
-			}
-		}
 		.question-title {
-			font-size: 18px;
-			margin: 5px 0;
+			padding: 20px 0;
+			font-size: 20px;
+			text-align: center;
 
 			a {
+				text-decoration: none;
 				color: $font-color;
 			}
 		}
-		.category {
-			padding: 0;
-		}
-		.actions {
+
+		.q-a-options {
 			padding: 0;
 
-			div {
-				cursor: pointer;
-			}
-			.comment, .favorite {
-				display: inline;
-				float: right;
-			}
+			section {
+				padding: 10px 0;
+				margin: 0;
+				text-align: center;
 
+				img {
+					padding-right: 15px;
+				}
+			}
 			.favorite {
-				padding-right: 25px;
+				border-right: 1px solid $grey;
 			}
 		}
 	}

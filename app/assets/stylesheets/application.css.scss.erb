@@ -57,12 +57,25 @@ body, html {
 	}
 }
 
-.white-border {
-	@include profile-border;
+.profile-border {
+	@include rounded-corner(50em);
+	box-shadow: 0 0 1px 1px #CCC;
+	padding: 3px;
 }
 
-.red-border {
-	@include profile-border($red);
+.aspirant-border {
+	background: #FFF;
+}
+
+.beginner-border {
+	background: #f7f3f2; /* Old browsers */
+	background-image: -moz-linear-gradient(top,  #f7f3f2 0%, #f7f3f2 26%, #57aab9 100%); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f3f2), color-stop(26%,#f7f3f2), color-stop(100%,#57aab9)); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top,  #f7f3f2 0%,#f7f3f2 26%,#57aab9 100%); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top,  #f7f3f2 0%,#f7f3f2 26%,#57aab9 100%); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(top,  #f7f3f2 0%,#f7f3f2 26%,#57aab9 100%); /* IE10+ */
+	background-image: linear-gradient(to bottom,  #f7f3f2 0%,#f7f3f2 26%,#57aab9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f3f2', endColorstr='#57aab9',GradientType=0 ); /* IE6-9 */
 }
 
 ::-webkit-input-placeholder { color: $font-color; font-family: InterFace; font-size: 15px; }
