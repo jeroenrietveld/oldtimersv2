@@ -1,0 +1,35 @@
+.sign-up {
+		background: $white;
+		box-shadow: 1px 1px 3px 0px #777;
+		padding: 5px 25px 30px 35px;
+		margin-top: 20px;
+		font-size: 16px;
+
+		margin: 50px auto 0;
+		width: 750px;
+
+		h1 {
+			font-size: 1.875em; /* 30px / 16px */
+		}
+
+		.info-block{
+			margin-bottom: 20px;
+		}
+
+		.field{
+			width: 45%;
+			margin: 5px 10px 5px 0px;
+		}
+
+		.register {
+			background: lighten($red, 5%);
+			color: $white;
+			text-decoration: none;
+			font-size: 18px;
+			padding: 15px 20px;
+		}
+
+		.register:hover {
+			background: $red;
+		}
+}

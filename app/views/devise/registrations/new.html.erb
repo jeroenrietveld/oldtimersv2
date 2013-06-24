@@ -1,33 +1,44 @@
 <div class="container">
-	<section class="row sign-up">
-		<header>
-			<h1>Sign up</h1>
-		</header>
+	<section class="row">
+		<div class="sign-up">
+			<header>
+				<h1>Registreren</h1>
+			</header>
+			<p>Hieronder kunt u uw gegevens invoeren om een account aan te maken. Dit stelt u in staat om vragen te stellen en antwoorden te geven op andere vragen!</p>
 
-		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-		  <%= devise_error_messages! %>
+			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+			  <%= devise_error_messages! %>
+			  <div class="info-block">
+				  <div class="row counter-row-margin">
+				  		<%= f.text_field :username, :placeholder => 'Gebruikersnaam', :class => 'field' %>
+				  </div>
 
-			<div><%= f.label :username %><br />
-		  <%= f.text_field :username, :autofocus => true %></div>
+					<div class="row counter-row-margin">
+				  	<%= f.text_field :first_name, :placeholder => 'Voornaam', :class => 'field' %>
+				  	<%= f.text_field :last_name, :placeholder => 'Achternaam', :class => 'field' %>
+				  </div>
+				</div>
+				
+				<div class="info-block">
+					<div class="row counter-row-margin">
+			  		<%= f.email_field :email, :placeholder => 'E-mail adres', :class => 'field' %>
+			 		</div>
+			 	</div>
 
-			<div><%= f.label :first_name %><br />
-		  <%= f.text_field :first_name %></div>
+			  <div class="row counter-row-margin">
+			  	<%= f.password_field :password, :placeholder => 'Wachtwoord (minimaal 8 karakters)', :class => 'field'%>
+			  </div>
 
-		  <div><%= f.label :last_name %><br />
-		  <%= f.text_field :last_name %></div>
+			  <div class="row counter-row-margin">
+			  	<%= f.password_field :password_confirmation, :placeholder => 'Bevestig wachtwoord', :class => 'field' %>
+			  </div>
 
-			<div><%= f.label :email %><br />
-		  <%= f.email_field :email %></div>
+			  <div class="row counter-row-margin">
+			  	<%= f.submit "Registreer", :class => 'register' %>
+			  </div>
+			<% end %>
 
-		  <div><%= f.label :password %><br />
-		  <%= f.password_field :password %></div>
-
-		  <div><%= f.label :password_confirmation %><br />
-		  <%= f.password_field :password_confirmation %></div>
-
-		  <div><%= f.submit "sign up" %></div>
-		<% end %>
-
-		<%= render "devise/shared/links" %>
+			<%= render "devise/shared/links" %>
+		</div>
 	</section>
 </div>

@@ -27,16 +27,56 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 							<%= image_tag("edit_cog.png", :alt => "box", :width => 20, :height => 20, :class => "edit-cog") %>
 						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Profile</a></li>
-							<li>
+						<div class="dropdown-menu profile-dropdown span4">
+							<header class="form-header">
+				 				<div class="progress-bar-container">
+					 				<span>1</span>
+	      					<div class="progress progress-striped">  
+									  <div class="bar"></div>  
+									</div>  
+									<span>2</span>
+									<div id="clearfix"></div>
+
+									<div class="rank-information">
+										<header><h2>35%</h2></header>
+										<section class="extra">
+											<header><h3>Rank 1</h3></header>
+											<span>75 punten in totaal</span>
+										</section>
+
+									</div>
+
+								</div>
+								
+							</header>
+							<footer class="form-footer">
+								<a href="#">Profile</a>
 								<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-							</li>
-						</ul>
+							</footer>
+
+						</div>
 					</div>
 				<% else %>
 					<div class="span2 login">
-						<%= link_to "Log in", new_user_session_path %>
+						<!--<%= link_to "Log in", new_user_session_path %> -->
+						<div class="login-container">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								Log in	
+							</a>
+							<div class="dropdown-menu profile-dropdown span4">
+								<%= form_for User.new, :url => new_user_session_path do |f| %>
+									<header class="form-header">
+										<div class="row"><%= f.email_field :email, :placeholder => "Username / Bedrijfsnaam", :class => "login-form-input" %></div>
+										<div class="row"><%= f.password_field :password, :placeholder => "Wachtwoord", :class => "login-form-input" %></div>
+									</header>
+									<footer class="form-footer">
+										<%= link_to "Wachtwoord vergeten?", new_user_password_path, :class => "login-form-forgot-password" %>
+										<%= f.submit "Log in", :class => 'login-form-button' %>
+									</footer>
+									<% end %>
+								<div id="clearfix"></div>
+							</div>
+						</div>
 					</div>
 				<% end %>
 			</nav>
