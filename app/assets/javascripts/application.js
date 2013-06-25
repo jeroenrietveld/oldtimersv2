@@ -25,6 +25,16 @@ $(document).ready(function() {
 		}
 	});
 
+	$(".register-user").click(function(){
+		$(".register-user .select input").prop("checked", true);
+		$(".register-company .select input").prop("checked", false);
+	});
+
+	$(".register-company").click(function(){
+		$(".register-company .select input").prop("checked", true);
+		$(".register-user .select input").prop("checked", false);
+	});
+
 	$("#categories_select").select2({
   	width: 'resolve',
   	placeholder: 'Selecteer passende categorieën'
