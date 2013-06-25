@@ -14,7 +14,8 @@
 
 				<form class="span6 search-bar" method="post">
 					<input type="search" class="nav-search" name="search" />
-					<i class="icon-search icon-large"></i>
+					<i><%= image_tag("search-icon.png", :title => "Zoek icoontje", :alt => "Vergrootglas", :width => 20, :height => 20) %></i>
+
 				</form>
 
 				<% if user_signed_in? %>
