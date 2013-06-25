@@ -63,8 +63,9 @@ body > header {
 		float: right;
 	}
 
-	.edit-cog {
-		margin-top: 6px;
+	.profile-img {
+		border: 2px solid $grey;
+		@include rounded-corner(13px);
 	}
 
 	.login {
