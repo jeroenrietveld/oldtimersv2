@@ -13,18 +13,14 @@ body > header {
 		padding: 10px 0;
 	}
 
-	.logo {
-		text-align: center;
-	}
-
 	.nav-items {
 		text-align: center;
 		list-style-type: none;
-		margin-bottom: 0;
-		padding: 5px 0;
+		margin: 0;
+		padding-top: 5px;
 
 		li {
-			padding: 0px 15px;
+			padding-right: 40px;
 			float: left;
 
 			a {
@@ -38,8 +34,8 @@ body > header {
 		text-align: center;
 	}
 
-	form {
-		margin-bottom: 0;
+	.search-bar {
+		margin: 0 15px 0 -15px;
 		height: 30px;
 		position: relative;
 
@@ -49,12 +45,13 @@ body > header {
 			padding-left: 25px;
 			border-radius: 15px;
 			border: 1px $grey solid;
+			width: 100%;
 		}
 
 		i {
 			position: absolute;
-			top: 10px;
-			left: 5px;
+			top: 9px;
+			left: 12px;
 		}
 	}
 	
@@ -71,7 +68,7 @@ body > header {
 	}
 
 	.login {
-		text-align: center;
+		text-align: right;
 		font-size: 15px;
 		padding-top: 5px;
 
