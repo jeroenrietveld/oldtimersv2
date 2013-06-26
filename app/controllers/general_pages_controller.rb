@@ -7,5 +7,7 @@ class GeneralPagesController < ApplicationController
 	end
 
 	def register
+		@user = User.new
+		@company = Company.new
 	end
 end

@@ -2,14 +2,13 @@
 	background: $white;
 	box-shadow: 1px 1px 3px 0px #777;
 	padding: 5px 25px 30px 35px;
-	margin-top: 20px;
 	font-size: 16px;
 
 	margin: 50px auto 0;
 	width: 750px;
 
 	h1 {
-		font-size: 1.875em; /* 30px / 16px */
+		font-size: 1.875em;
 	}
 
 	.info-block{
@@ -97,7 +96,150 @@
 		background: $white;
 		@include rounded-corner(2px);
 		@include box-shadow;
-		height: 100px;
 		margin-top: 30px;
+
+		form {
+			width: 100%;
+			margin: 0;
+
+			.form-inputs {
+				width: 80%;
+				margin: 0 auto;
+				text-align: center;
+				padding-top: 20px;
+
+				input:not([type='submit']) {
+					width: 90%;
+				}
+			}
+			.submit-footer {
+				width: 100%;
+				padding: 10px 0;
+				color: $white;
+				line-height: 30px;
+				vertical-align: middle;
+
+				input[type=checkbox] {
+					margin: 0 3px 0 30px;
+				}
+
+				input[type=submit] {
+					float: right;
+					margin-right: 20px;
+					width: 70px;
+					height: 33px;
+					padding: 0;
+					@include rounded-corner(3px);
+					color: $white;
+					border: 1px solid rgba(154,50,44,0.4);
+					background-color: #E24A3E;
+					-moz-box-shadow: 3px 5px 8px rgba(0, 0, 0, .13), 0 0 18px rgba(0, 0,0, .71), inset 1px 2px 1px rgba(255, 255, 255, .2), inset 0 0 3px rgba(255, 255, 255, .75);
+					-webkit-box-shadow: 3px 5px 8px rgba(0, 0, 0, .13), 0 0 18px rgba(0, 0, 0, .71), inset 1px 2px 1px rgba(255, 255, 255, .2), inset 0 0 3px rgba(255, 255, 255, .75);
+					box-shadow: 1px 1px 4px rgba(0, 0, 0, .13), 1px 1px 4px rgba(0, 0, 0, 0.1), inset 1px 1px 1px rgba(255, 255, 255, 0.2), inset 0 0 3px rgba(255, 255, 255, 0.1);
+				}
+			}
+		}
+
+		.bottom-offset {
+			padding-bottom: 20px;
+		}
+
+		.new_user {
+			.submit-footer {
+				background: $blue;
+			}
+
+			.porsche-owner {
+				border-top: 1px solid $grey;
+				padding: 10px 0;
+				font-size: 18px;
+				text-align: center;
+				
+				.form {
+					width: 80%;
+					margin: 0 auto;
+					text-align: left;
+					padding-top: 20px;
+
+					.radio {
+						width: 25%;
+						float: left;
+
+						label {
+							text-indent: 25px;
+						}
+					}
+
+					.dropdown {
+						width: 65%;
+						float: left;
+
+						select {
+							@include rounded-corner(3px);
+							background: #fbfbfb; /* Old browsers */
+							background: -moz-linear-gradient(top, #fbfbfb 0%,  #E7E7E7 100%); /* FF3.6+ */
+							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbfbfb), color-stop(100%, #E7E7E7)); /* Chrome,Safari4+ */
+							background: -webkit-linear-gradient(top, #fbfbfb 0%, #E7E7E7 100%); /* Chrome10+,Safari5.1+ */
+							background: -o-linear-gradient(top, #fbfbfb 0%, #E7E7E7 100%); /* Opera 11.10+ */
+							background: -ms-linear-gradient(top, #fbfbfb 0%, #E7E7E7 100%); /* IE10+ */
+							background: linear-gradient(to bottom, #fbfbfb 0%, #E7E7E7 100%); /* W3C */
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#E7E7E7', GradientType=0 ); /* IE6-9 */
+							color: $font-color;
+							border: 1px solid $grey;
+							outline: none;
+							height: 30px;
+							display: inline-block;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							appearance: none;
+							cursor: pointer;
+						}
+						@media screen and (-webkit-min-device-pixel-ratio:0) {
+							select {
+								padding-right:18px
+							}
+						}
+						label {
+							position: relative;
+						}
+						label:after {
+							content: 'V';
+							color: $font-color;
+							font-weight: bold;
+							right: 30px; top: 5px;
+							position: absolute;
+							pointer-events: none;
+							@include rounded-corner(2px);
+						}
+						label:before {
+							content: '';
+							right: 25px; top: 1px;
+							width: 20px; height: 28px;
+							background: #fbfbfb; /* Old browsers */
+							background: -moz-linear-gradient(top,  #fbfbfb 0%,  #E7E7E7 100%); /* FF3.6+ */
+							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfbfb), color-stop(100%, #E7E7E7)); /* Chrome,Safari4+ */
+							background: -webkit-linear-gradient(top,  #fbfbfb 0%, #E7E7E7 100%); /* Chrome10+,Safari5.1+ */
+							background: -o-linear-gradient(top,  #fbfbfb 0%, #E7E7E7 100%); /* Opera 11.10+ */
+							background: -ms-linear-gradient(top,  #fbfbfb 0%, #E7E7E7 100%); /* IE10+ */
+							background: linear-gradient(to bottom,  #fbfbfb 0%, #E7E7E7 100%); /* W3C */
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#E7E7E7', GradientType=0 ); /* IE6-9 */
+							position: absolute;
+							pointer-events: none;
+							display: block;
+						}
+					}
+				}
+
+				.year {
+
+				}
+			}
+		}
+
+		.new_company {
+			.submit-footer {
+				background: $red;
+			} 
+		}
 	}
 }
