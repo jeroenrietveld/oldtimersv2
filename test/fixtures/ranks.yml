@@ -1,11 +1,29 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
 one:
-  level: 1
-  name: MyString
-  required_points: 1
+  level: 0
+  name: Aspirant
+  required_points: 5
 
 two:
   level: 1
-  name: MyString
-  required_points: 1
+  name: Beginner
+  required_points: 10
+
+three:
+  level: 2
+  name: Average
+  required_points: 20
+
+four:
+  level: 3
+  name: Pro
+  required_points: 35
+
+five:
+  level: 4
+  name: Expert
+  required_points: 60
+
+six:
+  level: 5
+  name: Master
+  required_points: 80

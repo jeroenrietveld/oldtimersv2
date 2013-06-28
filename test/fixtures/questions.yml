@@ -1,9 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
 one:
-  title: MyString
-  description: MyText
+  title: Ik heb een vraag over kraak en piep geluiden
+  description: Ik heb een vraag over kraak en piep geluiden
 
 two:
-  title: MyString
-  description: MyText
+  title: Ik een vraag over mijn Porsche 911
+  description: Ik een vraag over mijn Porsche 911
