@@ -1,0 +1,50 @@
+<%= form_for(@user, :url => registration_path(@user)) do |f| %>
+	<div class="form-inputs">
+		<div class="username bottom-offset">
+			<%= f.text_field :username, :placeholder => 'Gebruikersnaam', :class => 'span5' %>
+		</div>
+		
+		<div class="credentials bottom-offset">
+			<%= f.email_field :email, :placeholder => 'E-mail adres', :class => 'field' %>
+
+			<%= f.password_field :password, :placeholder => 'Wachtwoord (minimaal 8 karakters)', :class => 'field'%>
+
+			<%= f.password_field :password_confirmation, :placeholder => 'Bevestig wachtwoord', :class => 'field' %>
+		</div>
+		
+		<%= f.text_field :first_name, :placeholder => 'Voornaam', :class => 'field' %>
+
+		<%= f.text_field :last_name, :placeholder => 'Achternaam', :class => 'field' %>
+	</div>
+
+	<div class="porsche-owner">
+		Bent u in het bezit van een Porsche 911 Targa?
+		
+		<div class="form">
+			<div class="radio select">
+				<input type="radio" id="porsche-yes" name="has-porsche" value="" checked>
+				<label for="porsche-yes">Ja</label><br />
+				<input type="radio" id="porsche-no" name="has-porsche" value="">
+				<label for="porsche-yes">Nee</label>
+			</div>
+			<div class="dropdown">
+				<label>
+					<select>
+						<option>1949</option>
+						<option>1948</option>
+					</select>
+				</label>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="submit-footer">
+		<input type="checkbox" />Ik ga akkoord met de Algemene Voorwaarden
+
+		<%= f.submit "Registreer", :class => 'register' %>
+
+		<div class="clearfix"></div>
+	</div>
+<% end %>

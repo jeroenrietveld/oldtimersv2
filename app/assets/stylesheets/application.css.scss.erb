@@ -98,11 +98,11 @@ button, input[type=submit] {
 	font-family: InterFace;
 }
 
-input[type="radio"] {
+.select > input[type="radio"] {
 	display: none;
 }
 
-input[type="radio"] + label {
+.select > input[type="radio"] + label {
 	display: inline-block;
 	width: 18px;
 	height: 18px;
@@ -111,7 +111,7 @@ input[type="radio"] + label {
   cursor: pointer;
 }
 
-input[type="radio"]:checked + label {
+.select > input[type="radio"]:checked + label {
     background: url('<%= asset_path('radio_buttons.png') %>') -18px top no-repeat;
 }
 

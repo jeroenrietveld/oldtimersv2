@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   validates_presence_of :username, :first_name, :last_name
 
+  attr_accessible :username, :first_name, :last_name, :email, :password, :password_confirmation, :current_password
+
   has_many :questions
   has_many :answers
   has_many :comments
