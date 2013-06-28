@@ -1,6 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: Antwoord
   description: Misschien moet je er boter op smeren
   question_id: 1
