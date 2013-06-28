@@ -2,7 +2,11 @@
 one:
   title: Ik heb een vraag over kraak en piep geluiden
   description: Ik heb een vraag over kraak en piep geluiden
+  user_id: 1
+  categories: 1
 
 two:
   title: Ik een vraag over mijn Porsche 911
   description: Ik een vraag over mijn Porsche 911
+  user_id: 1
+  categories: 2
