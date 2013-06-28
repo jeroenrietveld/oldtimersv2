@@ -132,10 +132,6 @@
 					@include rounded-corner(3px);
 					color: $white;
 					border: 1px solid rgba(154,50,44,0.4);
-					background-color: #E24A3E;
-					-moz-box-shadow: 3px 5px 8px rgba(0, 0, 0, .13), 0 0 18px rgba(0, 0,0, .71), inset 1px 2px 1px rgba(255, 255, 255, .2), inset 0 0 3px rgba(255, 255, 255, .75);
-					-webkit-box-shadow: 3px 5px 8px rgba(0, 0, 0, .13), 0 0 18px rgba(0, 0, 0, .71), inset 1px 2px 1px rgba(255, 255, 255, .2), inset 0 0 3px rgba(255, 255, 255, .75);
-					box-shadow: 1px 1px 4px rgba(0, 0, 0, .13), 1px 1px 4px rgba(0, 0, 0, 0.1), inset 1px 1px 1px rgba(255, 255, 255, 0.2), inset 0 0 3px rgba(255, 255, 255, 0.1);
 				}
 			}
 		}
@@ -147,6 +143,10 @@
 		.new_user {
 			.submit-footer {
 				background: $blue;
+				
+				input[type=submit] {
+					background: $red;
+				}
 			}
 
 			.porsche-owner {
@@ -229,17 +229,22 @@
 						}
 					}
 				}
-
-				.year {
-
-				}
 			}
 		}
 
 		.new_company {
 			.submit-footer {
 				background: $red;
-			} 
+				
+				input[type=submit] {
+					background: $blue;
+				}
+			}
+
+			.user-credentials {
+				border-top: 1px solid $grey;
+				padding: 10px 0;
+			}
 		}
 	}
 }

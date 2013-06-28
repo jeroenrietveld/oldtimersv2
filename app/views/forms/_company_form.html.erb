@@ -1,0 +1,30 @@
+<%= form_for(@company, :url => registration_path(@company)) do |f| %>
+	<div class="form-inputs company-info">
+		<div class="bottom-offset">
+			<%= f.text_field :company_name, :placeholder => 'Bedrijfsnaam', :class => 'field' %>
+			<%= f.text_field :city, :placeholder => 'Plaats', :class => 'field' %>
+			<%= f.text_field :postal, :placeholder => 'Postcode', :class => 'field' %>
+		</div>
+
+		<div class="bottom-offset">
+			<%= f.text_field :CoC, :placeholder => 'KVK-nummer', :class => 'field' %>
+			<%= f.text_field :specialty, :placeholder => 'Specialty', :class => 'field' %>
+		</div>
+	</div>
+
+	<div class="user-credentials">			
+		<div class="form-inputs">
+			<%= f.email_field :email, :placeholder => 'Contact e-mailadres', :class => 'field' %>
+			<%= f.password_field :password, :placeholder => 'Wachtwoord (minimaal 8 karakters)', :class => 'field'%>
+			<%= f.password_field :password_confirmation, :placeholder => 'Bevestig wachtwoord', :class => 'field' %>	
+		</div>
+	</div>
+
+	<div class="submit-footer">
+		<input type="checkbox" />Ik ga akkoord met de Algemene Voorwaarden
+
+		<%= f.submit "Registreer", :class => 'register' %>
+
+		<div class="clearfix"></div>
+	</div>
+<% end %>
