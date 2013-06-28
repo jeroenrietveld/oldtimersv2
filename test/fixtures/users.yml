@@ -3,4 +3,4 @@ one:
   first_name: Jeroen
   last_name: Rietveld
   email: jeroen@jeroen.nl
-  password: jeroen123
+  encrypted_password: $2a$10$47zKK0t4bI3zXnJDWtHr0uvAz9BRvTcNDzKmEdT7eQsGccYw.QxxG
