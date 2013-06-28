@@ -1,6 +1,6 @@
 one:
-	username: Jeroen
-	first_name: Jeroen
-	last_name: Rietveld
-	email: jeroen@jeroen.nl
-	password: jeroen123
+  username: Jeroen
+  first_name: Jeroen
+  last_name: Rietveld
+  email: jeroen@jeroen.nl
+  password: jeroen123
