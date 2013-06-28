@@ -184,12 +184,12 @@ body > header {
 			.login-form-button {
 				background: $red;
 				color: #fff;
-				width: 100px;
+				width: 75px;
 				height: 40px;
 				padding: 0;
 				position: absolute;
-				bottom: 5px;
-				right: 10px;
+				bottom: 12px;
+				right: 14px;
 				@include rounded-corner;
 
 			}
