@@ -10,12 +10,12 @@ two:
 
 three:
   level: 2
-  name: Average
+  name: Kenner
   required_points: 20
 
 four:
   level: 3
-  name: Pro
+  name: Vakman
   required_points: 35
 
 five:
