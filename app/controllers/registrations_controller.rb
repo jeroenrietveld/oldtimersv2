@@ -1,6 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
 	before_filter :configure_permitted_parameters, :only => [:create]
-	before_save :default_values
 	
 	def new
 		super
@@ -8,6 +7,8 @@ class RegistrationsController < Devise::RegistrationsController
 
 	def create
 		build_resource(sign_up_params)
+		resource.level = 0
+		resource.points = 0
 
 		if resource.save
 			if resource.active_for_authentication?
@@ -27,11 +28,6 @@ class RegistrationsController < Devise::RegistrationsController
 
 	def update
 		super
-	end
-
-	def default_values
-		self.level = 0
-		self.points = 0
 	end
 
 	protected
