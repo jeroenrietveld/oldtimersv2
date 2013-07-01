@@ -12,12 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-modal
 //= require bootstrap-dropdown
 //= require turbolinks
 //= require select2
 //= require_tree .
 
 $(document).ready(function() {
+
+	var selected_company;
+
+	/* enter button handler for label input */
 	$(".label-input").keypress(function(e) {
 		if(e.which == 13) {
 			e.preventDefault();
@@ -25,6 +30,7 @@ $(document).ready(function() {
 		}
 	});
 
+	/* Switch registration form handlers */
 	$(".register-user").click(function(){
 		$(".register-user .select input").prop("checked", true);
 		$(".register-company .select input").prop("checked", false);
@@ -35,25 +41,42 @@ $(document).ready(function() {
 		$(".register-user .select input").prop("checked", false);
 	});
 
+	/* Add select2 to category select */
 	$("#categories_select").select2({
-  	width: 'resolve',
-  	placeholder: 'Selecteer passende categorieën'
-  });
+		width: 'resolve',
+		placeholder: 'Selecteer passende categorieën'
+	});
 
-  $(".actions div").hover(function(){
-  	if($(this).attr("data-clickable") || $(this).attr("data-hoverable")) {
-    	var img = $(this).children('img').attr('src').match(/(\w+).png/)[1];
-    	$(this).find('img').attr('src', "/assets/" + img + "_highlight.png");
-    }
-  }, function(){
-  	if($(this).attr("data-clickable") || $(this).attr("data-hoverable")) {
-	    var img = $(this).find('img').attr('src').split('_highlight.png')[0];
-	    $(this).find('img').attr('src', img + ".png");
-	  }
-  });
+	/* functions for company select */
+	$("#companies_select").select2({
+		width: '500px',
+		placeholder: 'Selecteer een bedrijf'
+	});
 
-  $(".like").click(function() {
-  	if($(this).attr("data-clickable")) {
+	$("#companies_select").change(function() {
+		selected_company = $("#companies_select").select2('data').text;
+	});
+
+	$('#company_modal').on('hidden', function () {
+		$('.add_company').text("Geselecteerd: " + selected_company);
+	})
+
+	/* Highlight icons on hover */
+	$(".actions div").hover(function(){
+		if($(this).attr("data-clickable") || $(this).attr("data-hoverable")) {
+			var img = $(this).children('img').attr('src').match(/(\w+).png/)[1];
+			$(this).find('img').attr('src', "/assets/" + img + "_highlight.png");
+		}
+	}, function(){
+		if($(this).attr("data-clickable") || $(this).attr("data-hoverable")) {
+			var img = $(this).find('img').attr('src').split('_highlight.png')[0];
+			$(this).find('img').attr('src', img + ".png");
+		}
+	});
+
+	/* Like icon click handler */
+	$(".like").click(function() {
+		if($(this).attr("data-clickable")) {
 			if (!window.location.origin) window.location.origin = window.location.protocol+"//"+window.location.host;
 
 			var id = $(this).parent(".actions").data('id');
@@ -67,26 +90,27 @@ $(document).ready(function() {
 				}
 			});
 		}
-  });
-  
-  $('.dropdown-menu').find('form').click(function (e) {
-    e.stopPropagation();
-  });
+	});
+	
+	$('.dropdown-menu').find('form').click(function (e) {
+		e.stopPropagation();
+	});
 });
 
+/* function for adding labels */
 function test(link, association, content) {
 	var value = $(".label-input").val();
 
 	if(value) {
-	  var new_id = new Date().getTime();
-	  var regexp = new RegExp("hidden_label", "g");
+		var new_id = new Date().getTime();
+		var regexp = new RegExp("hidden_label", "g");
 		content = content.replace(regexp, new_id);
 
 		$(".label-input").val("");
-	  content = $(content).val(value);
+		content = $(content).val(value);
 
-	  $(link).parent(".labels").append(content);
+		$(link).parent(".labels").append(content);
 
-	  $(".added-labels").append('<div class="row added-label"><div class="span6 pushpin"><img src="/assets/pushpin.png" height="12" width="12" />'+value+'</div><div class="span3 remove-label"><img class="pull-right" src="/assets/remove.png" height="20" width="20" /></div></div>');
+		$(".added-labels").append('<div class="row added-label"><div class="span6 pushpin"><img src="/assets/pushpin.png" height="12" width="12" />'+value+'</div><div class="span3 remove-label"><img class="pull-right" src="/assets/remove.png" height="20" width="20" /></div></div>');
 	}
 }

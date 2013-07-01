@@ -52,6 +52,11 @@ class QuestionsController < ApplicationController
   def update
     @answer = Answer.new(answer_params)
     @answer.user = current_user
+
+    if params[:company][:companies]
+      @answer.company_id = params[:company][:companies]
+    end
+
     @question = Question.find(params[:id])
     @question.answers << @answer
 

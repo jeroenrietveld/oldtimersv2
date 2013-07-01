@@ -4,4 +4,8 @@ class Company < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :answers
+
+  attr_accessible :answer_id
 end

@@ -1,5 +1,5 @@
 <div class="span1">
-	<%= render :partial => "shared/profile_image", :locals => { :border => "#{level.downcase}-border" } %>
+	<%= render :partial => "shared/profile_image", :locals => { :border => "#{level.downcase}-border", :image => question.user.profile_image } %>
 </div>
 <div class="span10 question-info q-a-bubble">
   <div class="question-user user-info">

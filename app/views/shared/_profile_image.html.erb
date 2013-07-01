@@ -1,5 +1,5 @@
 <div class="profile-image-container">
 	<figure>
-		<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-border #{border}", :width => "50", :height => "50") %>
+		<%= image_tag(defined?(image) ? image : 'anonymous.png', :alt => "Profile Picture", :class => "profile-border #{border}", :width => "50", :height => "50") %>
 	</figure>
 </div>

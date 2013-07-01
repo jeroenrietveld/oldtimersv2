@@ -9,6 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
 		build_resource(sign_up_params)
 		resource.level = 0
 		resource.points = 0
+		resource.profile_image = "anonymous.png"
 
 		if resource.save
 			if resource.active_for_authentication?

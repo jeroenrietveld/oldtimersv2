@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="span1 offset1">
 			<% level = user_level(@question.user.level) %>
-			<%= render :partial => "shared/profile_image", :locals => { :border => "#{level.downcase}-border" } %>
+			<%= render :partial => "shared/profile_image", :locals => { :border => "#{level.downcase}-border", :image => @question.user.profile_image } %>
 		</div>
 		<article class="span9 asked-question q-a-bubble">
 			<div class="user-info">
@@ -31,7 +31,7 @@
 			</div>
 		</article>
 		<div class="span1">
-			Sharing
+			
 		</div>
 	</div>
 </div>
@@ -41,7 +41,7 @@
 		<div class="row">
 			<% if user_signed_in? %>
 				<div class="span1 offset1">
-					<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :username => @question.user.email } %>
+					<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :image => current_user.profile_image } %>
 				</div>
 				<%= render :partial => "forms/answer_form" %>
 			<% else %>

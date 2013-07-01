@@ -6,7 +6,7 @@
 		<% end %>
 	</div>
 	<div class="span9 offset2 buttons">
-		<button>
+		<button href="#company_modal" role="button" class="add_company" data-toggle="modal">
 			<%= image_tag("location_marker.png", :alt => "Bedrijf toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> Bedrijf toevoegen
 		</button>
 		<button>
@@ -18,5 +18,22 @@
 			Foto toevoegen
 		</button>
 	</div>
+	
+	<div id="company_modal" class="add_company_modal modal hide fade" tabindex="-1" role="dialog" aria-labelledby="CompanyModal" aria-hidden="true" aria-backdrop="false">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Voeg een bedrijf toe</h3>
+		</div>
+		<div class="modal-body select-company">
+			<%= collection_select(:company, :companies, Company.all, :id, :company_name, {}, 
+				{ :id => "companies_select"} )
+			%>
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Annuleer</button>
+			<button class="close-modal btn" data-dismiss="modal" aria-hidden="true">Selecteer bedrijf</button>
+		</div>
+	</div>
+	
 	<%= f.submit "Reageer", :class => 'button span2 pull-right' %>
 <% end %>

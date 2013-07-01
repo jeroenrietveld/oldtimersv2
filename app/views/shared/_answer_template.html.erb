@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="span1 offset1">
-		<%= render :partial => "shared/profile_image", :locals => { :border => "white-border" } %>
+		<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :image => answer.user.profile_image } %>
 	</div>
 
 	<div class="span8 answer-bubble q-a-bubble">
@@ -13,6 +13,23 @@
 		<div class="answer q-a-description">
 			<%= answer.description %>
 		</div>
+
+		<% if answer.company_id %>
+			<div class="company-info">
+				<div class="address pull-left span3">
+					<% c =  Company.find(answer.company_id) %>
+					<p><%= image_tag("landmark.png", :width => "13") %><%= c.company_name %></p>
+					<p><%= image_tag("telefoon.png", :width => "13") %><%= c.phone_number %></p>
+					<p><%= image_tag("klok.png", :width => "13") %>Vandaag geopend tot 20:00</p>
+					<p><%= image_tag("webshop.png", :width => "13") %><a href="#" class="company_webshop">Webshop beschikbaar ></a></p>
+				</div>
+				<div class="map pull-right offset1 span3">
+					<%= image_tag("Google maps.png", :width => "300") %>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		<% end %>
 
 		<% if user_signed_in? %>
 			<div class="actions q-a-options" data-id="<%= answer.id %>">
@@ -70,7 +87,7 @@
 				<% end %>
 			</div>
 			<div class="span1 comment-user-profile">
-				<%= render :partial => "shared/profile_image", :locals => { :border => "white-border" } %>
+				<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :image => c.user.profile_image } %>
 			</div>
 		<% end %>
 	</div>

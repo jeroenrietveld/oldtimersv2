@@ -1,6 +1,7 @@
 class Answer < ActiveRecord::Base
 	belongs_to :question
 	belongs_to :user
+	belongs_to :company
 
 	has_many :comments
 
@@ -9,4 +10,6 @@ class Answer < ActiveRecord::Base
 	validates :user, presence: true
 
 	make_flaggable :like
+
+	attr_accessible :description
 end

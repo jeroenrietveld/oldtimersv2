@@ -30,6 +30,10 @@
 			font-weight: bold;
 			margin: 0;
 		}
+
+		.detail {
+			word-wrap: break-word;
+		}
 	}
 	.q-a-options {
 		padding: 5px 15px;
@@ -75,6 +79,55 @@
 		resize: none;
 		border-radius: 4px 4px 0 0;
 		margin-bottom: 0px;
+	}
+
+	.add_company_modal {
+		@include rounded-corner(3px);
+		background: $white;
+		border: none;
+
+		.select-company {
+			text-align: center;
+			
+			ul {
+				border-radius: 4px 4px 0 0;
+				border-color: #D6D6D6;
+				box-shadow: none;
+
+				input{
+					box-shadow: none;
+				}
+			}
+			div {
+				margin: 0;
+			}
+		}
+
+		input {
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		button {
+			height: 33px;
+		}
+		.modal-footer {
+			background: $blue;
+			border: none;
+			-webkit-border-radius: 0 0 3px 3px;
+			-moz-border-radius: 0 0 3px 3px;
+			border-radius: 0 0 3px 3px;
+		}
+		.close-modal {
+			float: right;
+			margin-right: 20px;
+			width: 120px;
+			padding: 0;
+			@include rounded-corner(3px);
+			color: $white;
+			border: 1px solid rgba(154,50,44,0.4);
+			background: $red;
+		}
 	}
 
 	.buttons {
@@ -138,6 +191,25 @@
 		background: $white;
 		@include rounded-corner;
 		@include box-shadow;
+
+		.company-info {
+			background: darken($white, 2%);
+			border-top: 1px solid darken($white, 5%);
+			padding: 10px 10px;
+
+			p {
+				margin: 8px 0;
+
+				img {
+					padding-right: 5px;
+				}
+
+				.company_webshop {
+					text-decoration: underline;
+					color: $font-color;
+				}
+			}
+		}
 
 		.actions {
 			padding-top: 5px;

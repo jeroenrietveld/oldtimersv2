@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130628073723) do
+ActiveRecord::Schema.define(version: 20130701202444) do
 
   create_table "answers", force: true do |t|
     t.integer  "question_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20130628073723) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "company_id"
   end
 
   add_index "answers", ["question_id", "created_at"], name: "index_answers_on_question_id_and_created_at"
@@ -65,6 +66,7 @@ ActiveRecord::Schema.define(version: 20130628073723) do
     t.string   "postal"
     t.string   "CoC"
     t.string   "specialty"
+    t.string   "phone_number"
   end
 
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true
@@ -128,6 +130,7 @@ ActiveRecord::Schema.define(version: 20130628073723) do
     t.string   "last_name"
     t.integer  "level"
     t.integer  "points"
+    t.string   "profile_image"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
