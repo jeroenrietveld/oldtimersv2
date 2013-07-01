@@ -14,9 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-modal
 //= require bootstrap-dropdown
-//= require turbolinks
 //= require select2
-//= require_tree .
 
 $(document).ready(function() {
 
