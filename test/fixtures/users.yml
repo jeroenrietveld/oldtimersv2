@@ -1,6 +1,17 @@
 one:
-  username: Jeroen
-  first_name: Jeroen
-  last_name: Rietveld
-  email: jeroen@jeroen.nl
+  username: Kees van der Valk
+  first_name: Kees
+  last_name: van der Valk
+  email: keesvandervalk@gmail.com
   encrypted_password: $2a$10$47zKK0t4bI3zXnJDWtHr0uvAz9BRvTcNDzKmEdT7eQsGccYw.QxxG
+  level: 0
+  points: 0
+
+two:
+  username: Rob van der Kaart
+  first_name: Rob
+  last_name: van der Kaart
+  email: robvanderkaart@gmail.com
+  encrypted_password: $2a$10$47zKK0t4bI3zXnJDWtHr0uvAz9BRvTcNDzKmEdT7eQsGccYw.QxxG
+  level: 5
+  points: 5000

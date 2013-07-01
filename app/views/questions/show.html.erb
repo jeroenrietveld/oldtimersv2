@@ -41,7 +41,7 @@
 		<div class="row">
 			<% if user_signed_in? %>
 				<div class="span1 offset1">
-					<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :image => current_user.profile_image } %>
+					<%= render :partial => "shared/profile_image", :locals => { :border => "#{user_level(current_user.level).downcase}-border", :image => current_user.profile_image } %>
 				</div>
 				<%= render :partial => "forms/answer_form" %>
 			<% else %>

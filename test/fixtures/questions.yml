@@ -1,12 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 one:
-  title: Ik heb een vraag over kraak en piep geluiden
+  title: Ik snap niet hoe mijn benzine zo snel op gaat
   description: Ik heb een vraag over kraak en piep geluiden
-  user_id: 1
+  user_id: one
   categories: one
 
 two:
   title: Ik een vraag over mijn Porsche 911
   description: Ik een vraag over mijn Porsche 911
-  user_id: 1
+  user_id: one
   categories: two

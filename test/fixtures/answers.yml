@@ -1,5 +1,4 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
 one:
-  description: Misschien moet je er boter op smeren
-  question_id: 1
+  description: Je moet minder rijden
+  question_id: one
+  user_id: one

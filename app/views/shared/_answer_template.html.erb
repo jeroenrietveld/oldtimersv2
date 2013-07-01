@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="span1 offset1">
-		<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :image => answer.user.profile_image } %>
+		<%= render :partial => "shared/profile_image", :locals => { :border => "#{user_level(answer.user.level).downcase}-border", :image => answer.user.profile_image } %>
 	</div>
 
 	<div class="span8 answer-bubble q-a-bubble">
@@ -87,7 +87,7 @@
 				<% end %>
 			</div>
 			<div class="span1 comment-user-profile">
-				<%= render :partial => "shared/profile_image", :locals => { :border => "white-border", :image => c.user.profile_image } %>
+				<%= render :partial => "shared/profile_image", :locals => { :border => "#{user_level(c.user.level).downcase}-border", :image => c.user.profile_image } %>
 			</div>
 		<% end %>
 	</div>

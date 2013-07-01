@@ -1,1 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+one:
+	company_name: Otto-shop
+	city: Roosendaal
+	postal: 3563 GT
+	phone_number: 0164 218 600
+	email: otto-shop@gmail.com
+	encrypted_password: $2a$10$47zKK0t4bI3zXnJDWtHr0uvAz9BRvTcNDzKmEdT7eQsGccYw.QxxG

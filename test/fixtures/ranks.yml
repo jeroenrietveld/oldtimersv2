@@ -1,29 +1,29 @@
 one:
   level: 0
   name: Aspirant
-  required_points: 5
+  required_points: 0
 
 two:
   level: 1
   name: Beginner
-  required_points: 10
+  required_points: 50
 
 three:
   level: 2
   name: Kenner
-  required_points: 20
+  required_points: 200
 
 four:
   level: 3
   name: Vakman
-  required_points: 35
+  required_points: 1000
 
 five:
   level: 4
   name: Expert
-  required_points: 60
+  required_points: 2000
 
 six:
   level: 5
   name: Master
-  required_points: 80
+  required_points: 5000
