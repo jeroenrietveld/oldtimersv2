@@ -20,23 +20,24 @@
 				<% if user_signed_in? %>
 					<div class="span1 btn-group">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-							<%= image_tag("anonymous.png", :alt => "box", :width => 26, :class => "profile-img") %>
+							<%= image_tag(defined?(current_user.profile_image) ? current_user.profile_image : "anonymous.png", :alt => "box", :width => 26, :class => "profile-img") %>
 						</a>
 						<div class="dropdown-menu profile-dropdown logged-in span4">
 							<header class="form-header">
 				 				<div class="progress-bar-container">
 					 				<span class="level"><%= user_level(current_user.level) %></span>
 	      					<div class="progress progress-striped active">  
-									  <div class="bar"></div>  
+	      						<% style = "width: " + level_progression(current_user.level, current_user.points).to_s + "%" %>
+									  <div class="bar" style='<%= style %>'></div>  
 									</div>  
 									<span class="level"><%= next_level(current_user.level) %></span>
 									<div id="clearfix"></div>
 
 									<div class="rank-information">
-										<header><h2>35%</h2></header>
+										<header><h2><%= level_progression(current_user.level, current_user.points) %>%</h2></header>
 										<section class="extra">
 											<p><%= user_level(current_user.level).capitalize %></p>
-											<span class="points">75 punten in totaal</span>
+											<span class="points"><%= current_user.points %> punten in totaal</span>
 										</section>
 										<div id="clearfix"></div>
 									</div>

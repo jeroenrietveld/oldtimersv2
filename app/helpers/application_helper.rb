@@ -27,4 +27,15 @@ module ApplicationHelper
 
 		return "Max"
 	end
+
+	def level_progression(level, current_points)
+		next_rank = Rank.find_by_level(level+1)
+
+		unless next_rank == nil
+			required_points = next_rank.required_points - current_points
+			return 100 - ((required_points.to_f / next_rank.required_points.to_f) * 100).to_i
+		end
+
+		return "asd"
+	end
 end

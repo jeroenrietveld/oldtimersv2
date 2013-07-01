@@ -6,7 +6,10 @@
 	<div class="span8 answer-bubble q-a-bubble">
 		<div class="answer-user user-info">
 			<%= answer.user.email %>
-			<span class="level">User level</span>
+			<% level = user_level(answer.user.level) %>
+			<span class="level <%= level.downcase %>-level">
+				<%= level %>
+			</span>
 			<i class="pull-right created-at"><%= distance_of_time_in_words answer.created_at, Time.now %> geleden</i>
 		</div>
 
@@ -18,7 +21,7 @@
 			<div class="company-info">
 				<div class="address pull-left span3">
 					<% c =  Company.find(answer.company_id) %>
-					<p><%= image_tag("landmark.png", :width => "13") %><%= c.company_name %></p>
+					<p><%= image_tag("landmark.png", :width => "13") %><%= c.company_name %>, <%= c.city %>, <%= c.postal %></p>
 					<p><%= image_tag("telefoon.png", :width => "13") %><%= c.phone_number %></p>
 					<p><%= image_tag("klok.png", :width => "13") %>Vandaag geopend tot 20:00</p>
 					<p><%= image_tag("webshop.png", :width => "13") %><a href="#" class="company_webshop">Webshop beschikbaar ></a></p>
@@ -63,7 +66,10 @@
 			<div class="span7 offset3 comment-bubble q-a-bubble">
 				<div class="comment-user user-info">
 					<%= c.user.email %>
-					<span class="level">User level</span>
+					<% c_user_level = user_level(c.user.level) %>
+					<span class="level <%= level.downcase %>-level">
+						<%= c_user_level %>
+					</span>
 					<i class="pull-right created-at"><%= distance_of_time_in_words c.created_at, Time.now %> geleden</i>
 				</div>
 				

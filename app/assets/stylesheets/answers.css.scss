@@ -12,9 +12,23 @@
 			font-size: 12px;
 			padding-left: 5px;
 		}
-
+		.aspirant-level {
+			color: $font-color;
+		}
 		.beginner-level {
 			color: #57aab9;
+		}
+		.kenner-level {
+			color: #FFF;
+		}
+		.vakman-level {
+			color: #FFF;
+		}
+		.expert-level {
+			color: #FFF;
+		}
+		.master-level {
+			color: darken(#ffde97, 20%);
 		}
 
 		.created-at {

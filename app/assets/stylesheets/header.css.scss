@@ -67,7 +67,7 @@ body > header {
 
 	.profile-img {
 		border: 2px solid $grey;
-		@include rounded-corner(13px);
+		@include rounded-corner(15px);
 	}
 
 	.login {
@@ -106,10 +106,6 @@ body > header {
 				width: 58%;
 				float: left;
 				@include rounded-corner(15px);
-				
-				.bar {
-					width: 35%;
-				}
 			}
 		}
 
@@ -120,7 +116,7 @@ body > header {
 				width: 50%;
 
 				h2 {
-					font-size: 65px;
+					font-size: 58px;
 					padding-left: 15px;
 					font-weight: normal;
 				}
@@ -129,7 +125,7 @@ body > header {
 				float: right;
 				width: 50%;
 				padding-top: 5px;
-				font-size: 18px;
+				font-size: 17px;
 
 				p {
 					width: 100%;
