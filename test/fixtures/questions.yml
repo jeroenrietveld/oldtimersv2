@@ -3,9 +3,11 @@ one:
   description: Ik heb een vraag over kraak en piep geluiden
   user_id: one
   categories: one
+  labels: one
 
 two:
   title: Ik een vraag over mijn Porsche 911
   description: Ik een vraag over mijn Porsche 911
   user_id: one
   categories: two
+  labels: two

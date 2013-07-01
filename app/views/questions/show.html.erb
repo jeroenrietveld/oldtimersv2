@@ -26,7 +26,7 @@
 			</div>
 			<div class="q-a-options question-labels">
 				<% @question.labels.each do |l, index| %>
-					<div class="span3 question-label <% unless index == 3 %>label-border<% end %>">asd</div>
+					<div class="span3 question-label <% unless index == 3 %>label-border<% end %>"><%= l.title %></div>
 				<% end %>
 			</div>
 		</article>

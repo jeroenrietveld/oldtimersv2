@@ -6,6 +6,7 @@ one:
   encrypted_password: $2a$10$47zKK0t4bI3zXnJDWtHr0uvAz9BRvTcNDzKmEdT7eQsGccYw.QxxG
   level: 0
   points: 0
+  profile_img: kees.png
 
 two:
   username: Rob van der Kaart
@@ -15,3 +16,4 @@ two:
   encrypted_password: $2a$10$47zKK0t4bI3zXnJDWtHr0uvAz9BRvTcNDzKmEdT7eQsGccYw.QxxG
   level: 5
   points: 5000
+  profile_img: rob.png
